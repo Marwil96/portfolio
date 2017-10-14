@@ -16,10 +16,10 @@ class LandingPage extends Component {
   animateDown() {
 
       if(this.state.pageState === 1){
-      return 'landingPageContainer'
+      return 'App'
       }
       else if(this.state.pageState === 2) {
-        return 'landingPageContainer moveDown'
+        return 'App moveDown'
       }
     
     console.log('wop')
@@ -51,14 +51,9 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="App">
-      
-        <div className={this.animateDown()}>
-        <div id="outer-container">
+      <div className={this.animateDown()}> 
+        <div className="landingPageContainer">
         <Menu 
-
-          pageWrapId={ "page-wrap" } 
-          outerContainerId={ "outer-container" }
           right 
           width={ '18%' } 
           customBurgerIcon={ <img className="menuButton" src={menuButton}/> 
@@ -71,7 +66,6 @@ class LandingPage extends Component {
             <a id="Behance" className="menu-item" href="/contact">Behance</a>
             <a id="Medium" className="menu-item" href="/contact">Medium</a>
       </Menu>
-      </div>
           <div className="rubrikContainer"> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
             <TextLoop children={["Digital Designer", "Frontend Dev", "Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
@@ -83,7 +77,9 @@ class LandingPage extends Component {
 
           
         </div>
-        <div id="killerOfDivs"> </div>
+        <div className="projectPageContainer"> 
+          <h1 className="projectRubrik"> Project </h1>
+        </div>
       </div>
     );
   }
