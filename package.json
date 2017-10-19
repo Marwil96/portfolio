@@ -7,7 +7,10 @@
     "react-burger-menu": "^2.1.9",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14",
-    "react-text-loop": "^1.1.0"
+    "react-scroll": "^1.6.1",
+    "react-slick": "^0.15.4",
+    "react-text-loop": "^1.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
