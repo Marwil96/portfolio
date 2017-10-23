@@ -1,6 +1,8 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-
+a {
+    color: inherit;
+}
 .App {
   flex-direction:column;
   display: flex;
@@ -10,7 +12,6 @@
   position: absolute;
   background-color: #F5F5F5;
   transform: translate3d(0px, 0px);
-  
 }/*
 .moveDown {
   transform: translateY(-10%);

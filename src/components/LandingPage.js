@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import './Components.css';
 import TextLoop from 'react-text-loop';
 import arrowImage from './download.svg';
 import menuButton from './menu.svg';
 import { slide as Menu } from 'react-burger-menu';
 import Slider from 'react-slick';
-import Scroll from 'react-scroll';
-import {scroller, Element, Link} from 'react-scroll';
+import {scroller, Element} from 'react-scroll';
+import {
+  Link
+} from 'react-router-dom';
+import SliderBox from './common/SliderBox.js';
 
 var pageOrientation = 0;
 var settings = {
@@ -71,10 +73,10 @@ class LandingPage extends Component {
           }>
             <h1 id="menuNamn"> William Martinsson </h1>
             <a id="home" className="menu-item" href="/">Home</a>
-            <a id="about" className="menu-item" href="/about">About</a>
-            <a id="contact" className="menu-item" href="/contact">Contact</a>
-            <a id="Behance" className="menu-item" href="/contact">Behance</a>
-            <a id="Medium" className="menu-item" href="/contact">Medium</a>
+            <a id="about" className="menu-item" href="/about"><Link to="/about">About </Link></a>
+            <a id="contact" className="menu-item" href="/">Contact</a>
+            <a id="Behance" className="menu-item" href="https://www.behance.net/William_mae68a">Behance</a>
+            <a id="Medium" className="menu-item" href="https://medium.com/@marwil1996">Medium</a>
       </Menu>
           <div className="rubrikContainer"> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
@@ -88,7 +90,7 @@ class LandingPage extends Component {
           
         </div>
         <Element name="test1" className="projectPageContainer">
-          <h1 className="projectRubrik"> Project </h1>
+          <h1 className="projectRubrik"> Projects </h1>
           <h1 className="projectSubheaderText"><span className="projectSubheader"> On The Way </span></h1>
           <Slider {...settings} className="slider">
             <div className="sliderContainer project1">
@@ -110,6 +112,7 @@ class LandingPage extends Component {
           <h1 className="projectSubheaderText subheaderPosition2"><span className="projectSubheader projectSubheaderColor2"> Done </span></h1>
 
           <Slider {...settings} className="slider">
+
             <div className="sliderContainer projectx1">
               <h1 className="projectBoxRubrik">T H R I V E</h1>
               <h2 className="projectBoxUnderRubrik">Education</h2>
@@ -124,7 +127,7 @@ class LandingPage extends Component {
           <div className="footerContainer"> 
             <div className="footerLinkContainer">
               <h1 className="footerLinkText"> 
-                About<br/>
+              <Link to="/about">  About</Link><br/>
                 Contact </h1>
             </div>
             <div className="footerContactContainer">

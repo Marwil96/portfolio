@@ -1,0 +1,159 @@
+a {
+    color: inherit;
+}
+
+.aboutPageContainer{
+  flex-direction:column;
+  display: flex;
+  justify-content: center;
+  height: 250%;
+  width: 100%;
+  position: relative;
+  background-color: #F5F5F5;
+}
+.aboutContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+.menuContainer {
+       display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-item-align: end;
+    justify-self: center;
+    position: fixed;
+    height: 100%;
+    align-items: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+.menuButton {
+  height: 50px;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.bm-burger-button {
+ position: absolute;
+ right: 8%;
+ height: 50px;
+ top:8%;
+}
+ 
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+ 
+ 
+/* General sidebar styles */
+.bm-menu {
+  background: #383030;
+  font-size: 1.15em;
+}
+ 
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+ 
+/* Wrapper for item list */
+.bm-item-list {
+  color: white;
+  text-align: center;
+}
+ 
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  color: white;
+  font-size: 36px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  padding-top: 15%;
+}
+#menuNamn {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  background:#F6A623;
+  width: 100%;
+  padding:0;
+  margin-top: 15%;
+
+}
+
+.aboutRubrik {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  opacity: 0.76;
+  margin: 30vh  0 0 0;
+}
+.aboutUnderRubrik {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  opacity: 0.76;
+  margin: 0.1% 0 0 0;
+}
+.postItAreaContainer {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  -ms-flex-pack: center;
+  justify-content: center;
+ width: 100%;
+ margin-top: 5%;
+ margin-bottom: 10%;
+}
+.postItContainer {
+  margin-top: 2%;
+  width: 330px;
+  height: 290px;
+  background:blue;
+  margin-left: 14px;
+  min-width: 333px;
+  box-shadow: 1px 3px 10px #888888;
+  z-index: 1;
+}
+.postItRubrik {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.postItText {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 25px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  opacity: 0.8;
+  max-width: 85%;
+}
+.footerContainer2 {
+  height:16vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  bottom: 0;
+  background-color: #323232;
+  margin: 0;
+  color: white;
+  justify-content:space-between;
+}
