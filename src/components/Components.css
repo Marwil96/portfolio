@@ -7,7 +7,7 @@ a {
   flex-direction:column;
   display: flex;
   justify-content: flex-start;
-  height: 275%;
+  height: 452%;
   width: 100%;
   position: absolute;
   background-color: #F5F5F5;
@@ -20,10 +20,28 @@ a {
 .moveToMeny {
   transform: translate3d(0px, -100%, 0px);
 }*/
+
+.menuText {
+  position: fixed;
+  z-index: 1000;
+  top: 5%;
+  right: 10%;
+  font-size: 30px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  opacity: 0.76;
+  cursor: pointer;
+}
+.active {
+  font-size: 40px;
+  font-weight: 500;
+  animation: ease-in-out 0.2;
+}
 .landingPageContainer {
-  height: 58%;
+  /*height: 26.8%;*/
   width: 100%;
   position: relative;
+  flex:1;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
@@ -62,7 +80,7 @@ a {
   opacity: 0.75;
   -webkit-animation: bounceTop 2s ease-in-out infinite alternate-reverse both;
   animation: bounceTop 2s ease-in-out infinite alternate-reverse both;
-      cursor: pointer;
+  cursor: pointer;
 }
 .arrowContainer {
       display: -ms-flexbox;
@@ -168,13 +186,15 @@ a {
 
 
 .projectPageContainer {
-  height: 100%;
+ /* height: 33%;*/
   width: 100%;
+  flex:1.5;
   position: relative;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
   background-color: #F5F5F5;
+  border-bottom: 1px solid black;
 }
 
 .projectRubrik {
@@ -228,10 +248,18 @@ a {
   font-weight: 700;
   text-align: center;
 }
+.projectBoxMinorRubrik {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  margin-right: 6%;
+  margin-bottom: -3%;
+  font-weight: 400;
+  text-align: right;
+}
 .projectBoxUnderRubrik {
   font-family: 'Roboto Mono', monospace;
   font-size: 28px;
-  margin-top: 16%;
+  margin-top: 5%;
   font-weight: 500;
   text-align: center;
 }
@@ -263,7 +291,7 @@ a {
   background-color: #80bbe5;
 }
 .footerContainer {
-  height: 9%;
+  height: 3.3%;
   width: 100%;
   position: absolute;
   display: flex;

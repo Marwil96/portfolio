@@ -6,7 +6,8 @@ a {
   flex-direction:column;
   display: flex;
   justify-content: center;
-  height: 250%;
+  /*height: 100%;*/
+  flex: 1.95;
   width: 100%;
   position: relative;
   background-color: #F5F5F5;
@@ -99,7 +100,7 @@ a {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   opacity: 0.76;
-  margin: 30vh  0 0 0;
+  margin: 15vh  0 0 0;
 }
 .aboutUnderRubrik {
   text-align: center;
@@ -109,51 +110,51 @@ a {
   opacity: 0.76;
   margin: 0.1% 0 0 0;
 }
-.postItAreaContainer {
+.infoWindow{
+  width: 80%;
+  height: 30%;
+  min-height: 410px;
+  background-color:#FFF793;
+  align-self: center;
+  margin-top: 5%;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  align-content: space-evenly;
-  -ms-flex-pack: center;
-  justify-content: center;
- width: 100%;
- margin-top: 5%;
- margin-bottom: 10%;
+  flex-direction: row;
 }
-.postItContainer {
-  margin-top: 2%;
-  width: 330px;
-  height: 290px;
-  background:blue;
-  margin-left: 14px;
-  min-width: 333px;
-  box-shadow: 1px 3px 10px #888888;
-  z-index: 1;
+.textWindow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-.postItRubrik {
-  text-align: center;
-  font-size: 35px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 500;
-  opacity: 0.7;
+.textWindowRubrik {
+  margin-top: 15%;
+   font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 38px;
+  text-transform: uppercase;
+  opacity: 0.76;
+  letter-spacing: 0.67px;
 }
-.postItText {
-  text-align: left;
-  padding-left: 15px;
-  font-size: 25px;
+.textWindowText {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
-  opacity: 0.8;
-  max-width: 85%;
+  margin-top: -5%;
+  font-size: 28px;
+  opacity: 0.76;
 }
-.footerContainer2 {
-  height:16vh;
-  width: 100%;
-  position: relative;
-  display: flex;
-  bottom: 0;
-  background-color: #323232;
-  margin: 0;
-  color: white;
-  justify-content:space-between;
+.textWindowContactMe {
+-ms-transform: rotate(-270deg); /* IE 9 */
+-webkit-transform: rotate(-270deg); /* Chrome, Safari, Opera */
+transform: rotate(-270deg);
+font-family: 'Roboto Mono', monospace;
+font-weight: 400;
+text-decoration: underline;
+font-size: 45px;
+color: #000000;
+opacity: 0.8;
+letter-spacing: 0.67px;
+  text-transform: uppercase;
+  justify-content: center;
+  text-align: center;
 }
+
+
