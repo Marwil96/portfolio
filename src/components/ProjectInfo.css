@@ -1,0 +1,33 @@
+.projectInfoContainer {
+	display: inline-block;
+    position: fixed;
+    height:150vh;
+    width: 100%;
+    border-width: 0;
+    vertical-align: middle;
+    text-align: left;
+    z-index: 10000;
+    background-color: #fff;
+    box-sizing: border-box;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    overflow-y:hidden;
+    margin-top: 100vh;
+}
+
+.slideBox {
+	display: inline-block;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    border-width: 0;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #fff;
+    box-sizing: border-box;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    overflow-y:auto;
+}

@@ -12,7 +12,7 @@ import PostIt from './common/PostIt';
 class About extends Component {
   render() {
     return (
-      <Element name="aboutPage" className="aboutPageContainer">
+      <Element name="AboutPage" className="aboutPageContainer">
         <div className="aboutContainer">
           <h1 className="aboutRubrik"> William Martinsson </h1>
           <h2 className="aboutUnderRubrik"> Digital Designer </h2>
