@@ -318,7 +318,7 @@ a {
     float: left;
     font-size: 20px;
     margin-right: 0%;
-    text-align: center;
+    text-align: left;
     align-items: center;
 }
 .footerContactContainer {
@@ -330,7 +330,7 @@ a {
     float: right;
     font-size: 20px;
     margin-right: 0%;
-    text-align: center;
+    text-align: right;
     align-items: center;
 }
 .footerLinkText {

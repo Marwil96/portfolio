@@ -82,7 +82,7 @@ componentDidMount() {
             </div>
             <div className="footerContactContainer">
               <h2 className="footerContactText"><a href="https://www.behance.net/William_mae68a"> Behance</a>
-              <br/> Github </h2>
+              <br/> <a href="https://github.com/Marwil96">Github</a> </h2>
             </div>
           </div>
       </div>

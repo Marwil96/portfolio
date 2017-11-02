@@ -105,12 +105,12 @@ h4 {
 	display: block;
 	margin-right: auto;
 }
-.ImgInfoContainerLeft {
+.imgInfoContainerLeft {
   align-self: flex-start;
   margin-left: 12.5%;
   width: 40%;
 }
-.ImgInfoContainerRight {
+.imgInfoContainerRight {
   align-self: flex-end;
   text-align: right;
   margin-right: 12.5%;
