@@ -299,6 +299,7 @@ a {
 }
 .footerContainer {
   height: 3.3%;
+  min-height: 106px;
   width: 100%;
   position: absolute;
   display: flex;
@@ -306,7 +307,7 @@ a {
   background-color: #323232;
   margin: 0;
   color: white;
-  justify-content:space-between;
+  justify-content:space-around;
 }
 .footerLinkContainer {
    height: 100%;
@@ -315,9 +316,10 @@ a {
     -ms-flex-pack: end;
     justify-content: start;
     float: left;
-    font-size: 15px;
+    font-size: 20px;
     margin-right: 0%;
-    text-align: left;
+    text-align: center;
+    align-items: center;
 }
 .footerContactContainer {
      height: 100%;
@@ -326,16 +328,15 @@ a {
     -ms-flex-pack: end;
     justify-content: start;
     float: right;
-    font-size: 13px;
+    font-size: 20px;
     margin-right: 0%;
-    text-align: right;
+    text-align: center;
+    align-items: center;
 }
 .footerLinkText {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   margin:0;
-  padding-top: 8%;
-  padding-left: 24%;
   text-decoration:underline;
   cursor:pointer;
 }
@@ -344,8 +345,6 @@ a {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   margin:0;
-  padding-top: 4%;
-  padding-right: 7%;
   text-decoration:underline;
   cursor:pointer;
 }
@@ -355,113 +354,35 @@ a {
 
 
 
-/* Animation Bounce
-@-webkit-keyframes bounceTop {
-  0% {
-    -webkit-transform: translateY(-45px);
-            transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  25%,
-  55%,
-  75%,
-  87% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
+@media (max-width: 780px) {
+  .rubrikText {
+    font-size: 107%;
 }
-@keyframes bounceTop {
-  0% {
-    -webkit-transform: translateY(-45px);
-            transform: translateY(-45px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  25%,
-  55%,
-  75%,
-  87% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
+.bigHello {
+    font-size: 150%;
+}
+.App {
+  position: relative!important;
+}
+.landingPageContainer {
+  height: 100vh;
+  flex:none;
+}
+.projectPageContainer {
+  height: 150vh;
+  flex:none;
+}
+.aboutPageContainer {
+  height: 134vh;
+  flex:none;
 }
 
-*/ 
+}
+@media (max-width: 330px) {
+.sliderContainer {
+  min-width: 255px;
+}
+}
 
 
 

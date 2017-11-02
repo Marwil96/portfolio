@@ -38,7 +38,7 @@ class ProjectPage extends Component {
               <h2 className="projectBoxUnderRubrik">Education</h2>
               <h3 className="projectBoxText">Make a campain site</h3>
             </div>
-            <Link to='/project' className="sliderContainer project2" onClick={this.props.woperFunction}>
+            <Link to='/projectPortfolio' className="sliderContainer project2">
               <h3 className="projectBoxMinorRubrik"> Developer </h3>
               <h1 className="projectBoxRubrik">Reporter</h1>
               <h2 className="projectBoxUnderRubrik">Errors</h2>
@@ -54,19 +54,18 @@ class ProjectPage extends Component {
           <h1 className="projectSubheaderText subheaderPosition2"><span className="projectSubheader projectSubheaderColor2"> Done </span></h1>
 
           <Slider {...settings} className="slider">
-
-            <div className="sliderContainer projectx1">
+          <Link to='/projectPortfolio' className="sliderContainer projectx1">
               <h3 className="projectBoxMinorRubrik"> Developer & Design </h3>
               <h1 className="projectBoxRubrik">Portfolio</h1>
               <h2 className="projectBoxUnderRubrik">Show my self</h2>
               <h3 className="projectBoxText">An Portfolio page that shows my work</h3>
-            </div>
-            <div className="sliderContainer projectx2">
+            </Link>
+            <Link to='/projectInfographic' className="sliderContainer projectx2">
               <h3 className="projectBoxMinorRubrik"> Design </h3>
               <h1 className="projectBoxRubrik">Infographic</h1>
               <h2 className="projectBoxUnderRubrik">Unequal</h2>
               <h3 className="projectBoxText">How to show unequal disability allowance</h3>
-            </div>
+            </Link>
           </Slider>
         </Element>
     );

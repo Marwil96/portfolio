@@ -21,18 +21,29 @@ var settings = {
 class LandingPage extends Component {
   constructor(props) {
     super(props);
+    this.state= {
+      AppFixed: false,
+    };
   }
-  showSettings (event) {
-    event.preventDefault();
+  fixedApp() {
+    if(this.state.AppFixed === false ) {
+      return "App"
+    }
+    else if(this.state.AppFixed === true ) {
+      return "App"
+    }
   }
-  woper() {
-    console.log('woper');
+  changeAppState() {
+    const currentState = this.state.AppFixed;
+    this.setState({ AppFixed: !currentState });
   }
-
+componentDidMount() {
+  this.setState({ AppFixed: false});
+}
 
   render() {
     return (
-      <div className="App"> 
+      <div className={this.fixedApp()}> 
       <h1 className="menuText">
         <span><Link activeClass="active" to="LandingPage" spy={true} smooth={true} duration={500}>01</Link></span>/
         <span><Link activeClass="active" to="projectPage" spy={true} smooth={true} duration={500}>02</Link></span>/
@@ -61,18 +72,17 @@ class LandingPage extends Component {
             <img className="downArrow bounce" src={arrowImage}/>
           </Link>
         </Element>
-        <ProjectPage woperFunction={this.woper.bind(this)} />
+        <ProjectPage woperFunction={this.changeAppState.bind(this)} />
          <About/>
           <div className="footerContainer"> 
             <div className="footerLinkContainer">
-              <h1 className="footerLinkText"> 
-              <Link to="/about">  About</Link><br/>
-                Contact </h1>
+              <h2 className="footerLinkText"> 
+               <a href="https://medium.com/@marwil1996">Medium</a><br/>
+               <a href="https://williammartinsson.typeform.com/to/grsvRk"> Contact </a></h2>
             </div>
             <div className="footerContactContainer">
-              <h2 className="footerContactText"> William Martinsson
-              <br/> 0768023804
-              <br/> William_martinsson@hotmail.com </h2>
+              <h2 className="footerContactText"><a href="https://www.behance.net/William_mae68a"> Behance</a>
+              <br/> Github </h2>
             </div>
           </div>
       </div>
