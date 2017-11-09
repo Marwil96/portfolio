@@ -25,6 +25,7 @@ class LandingPage extends Component {
       AppFixed: false,
     };
   }
+  
   fixedApp() {
     if(this.state.AppFixed === false ) {
       return "App"

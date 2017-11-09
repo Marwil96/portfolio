@@ -14,6 +14,9 @@ import {scroller, Element} from 'react-scroll';
 
 
 class ProjectPortfolio extends Component {
+  componentWillMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <Element className="projectInfoContainer">

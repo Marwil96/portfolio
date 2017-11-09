@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
-  Link
+  Link,
+  Redirect,
+  Switch,
+  push
 } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 import { spring, AnimatedRoute } from 'react-router-transition';
 import LandingPage from './components/LandingPage';
 import About from './components/About';
 import ProjectPage from './components/ProjectPage';
 import ProjectPortfolio from './components/projects/ProjectPortfolio';
 import ProjectInfographic from './components/projects/ProjectInfographic';
+
+const history = createHistory();
 function mapStyles(styles) {
   return {
     opacity: styles.opacity,
@@ -25,6 +31,32 @@ function bounce(val) {
     stiffness: 330,
     damping: 22,
   });
+}
+class Quick extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      woper: true,
+    };
+  }
+  componentDidUpdate()
+  {
+    console.log("loaded Woper")
+     window.location.reload();
+  }
+  reload() {
+    window.location.reload();
+  }
+  componentDidMount() {
+   console.log("wop")
+    history.push('/#landingPage')
+
+  }
+  render() {
+  return (
+    null
+  );
+  }
 }
 
 // child matches will...
@@ -65,23 +97,29 @@ class App extends Component {
     const currentState = this.state.AppFixed;
     this.setState({ AppFixed: !currentState });
   }
+  componentWillMount() {
+   console.log("wop")
+  }
   render() {
     return (	
     <Router>
     <div>
-    <Route path="/">
+    <Switch>
     <div>
+      <Route path="/" component={Quick}/>
       <Route path="/landingPage" component={LandingPage} AppFixed={this.fixedApp.bind(this)}/>
       <Route path="/about" component={About}/>
       <Route path="/projectPage" component={ProjectPage} />
       </div>
-      </Route>
+      </Switch>
+      <Switch>
       <AnimatedRoute path="/projectPortfolio" component={ProjectPortfolio} atEnter={{ offset:0 }}
       atLeave={{ offset: -100 }}
       atActive={{ offset: 0 }} />
       <AnimatedRoute path="/projectInfographic" component={ProjectInfographic} atEnter={{ offset:0 }}
       atLeave={{ offset: -100 }}
       atActive={{ offset: 0 }} />
+      </Switch>
       </div>
   	</Router>
     );
