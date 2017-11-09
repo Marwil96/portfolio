@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import './ProjectInfo.css';
 import 'loaders.css/src/animations/ball-pulse.scss';
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom';
-import Loader from 'react-loaders';
 import arrowImage from '../download.svg';
 import firstImage from '../../img/Infographic.png';
 import secondImage from '../../img/InfoGraphicNewsPaper.png';
-import {scroller, Element} from 'react-scroll';
+import {Element} from 'react-scroll';
 
 
 
@@ -56,7 +53,7 @@ class ProjectInfographic extends Component {
           <h2 className="secondImgText">Take in the information fast with the help of the colors.</h2>
         </div>
         <div class="greyImgBackground"> <img className="projectImage"src={secondImage} /> </div>
-        <Link to="/#projectPortfolio">
+        <Link to="/projectPortfolio">
             <img className="rightArrow" src={arrowImage}/>
       </Link>
       <Link to="/projectPortfolio">

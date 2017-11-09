@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import './Components.css';
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom';
 import Slider from 'react-slick';
-import {scroller, Element} from 'react-scroll';
-import SliderBox from './common/SliderBox.js';
+import {Element} from 'react-scroll';
 
-var pageOrientation = 0;
 var settings = {
       dots: false,
       infinite: false,
@@ -18,9 +14,6 @@ var settings = {
     };
 
 class ProjectPage extends Component {
-  constructor(props) {
-    super(props);
-  }
   showSettings (event) {
     event.preventDefault();
   }

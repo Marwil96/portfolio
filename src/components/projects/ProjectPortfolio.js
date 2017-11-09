@@ -1,23 +1,38 @@
 import React, { Component } from 'react';
 import './ProjectInfo.css';
 import {
-  BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom';
 import arrowImage from '../download.svg';
 import LandingPageImage from '../../img/LandingPage.png';
 import ProjectPageImage from '../../img/ProjectPage.png';
 import AboutPageImage from '../../img/AboutPage.png';
-import {scroller, Element} from 'react-scroll';
+import {Element} from 'react-scroll';
 
 
 
 class ProjectPortfolio extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      loading: true,
+    };
+  }
+componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1000);
+  }
   componentWillMount() {
     window.scrollTo(0, 0)
   }
-  render() {
+  pageRender(loading) {
+    console.log(loading)
+    if(loading === true) {
+      console.log("Loading")
+      return(<div className="animationContainer"> <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div></div>)
+  ;
+    }
     return (
       <Element className="projectInfoContainer">
       <Link to="/landingPage">
@@ -48,6 +63,14 @@ class ProjectPortfolio extends Component {
             <img className="leftArrow" src={arrowImage}/>
       </Link>
       </Element>
+      )
+  }
+
+  render() {
+    return (
+      <div>
+      {this.pageRender(this.state.loading)}
+      </div>
     );
   }
 }

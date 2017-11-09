@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 import './Components.css';
 import TextLoop from 'react-text-loop';
 import arrowImage from './download.svg';
-import menuButton from './menu.svg';
-import { slide as Menu } from 'react-burger-menu';
-import Slider from 'react-slick';
-import {scroller, Element, Link} from 'react-scroll';
-import SliderBox from './common/SliderBox.js';
+import { Element, Link} from 'react-scroll';
 import About from './About';
 import ProjectPage from './ProjectPage';
 
-var pageOrientation = 0;
 var settings = {
       dots: false,
       infinite: false,
@@ -22,58 +17,39 @@ class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.state= {
-      AppFixed: false,
+      loading: true
+
     };
   }
-  
-  fixedApp() {
-    if(this.state.AppFixed === false ) {
-      return "App"
-    }
-    else if(this.state.AppFixed === true ) {
-      return "App"
-    }
-  }
-  changeAppState() {
-    const currentState = this.state.AppFixed;
-    this.setState({ AppFixed: !currentState });
-  }
-componentDidMount() {
-  this.setState({ AppFixed: false});
-}
 
-  render() {
+
+  pageRender(loading) {
+    console.log(loading)
+    if(loading === true) {
+      console.log("Loading")
+      return(<div className="animationContainer"> <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div></div>)
+  ;
+    }
     return (
-      <div className={this.fixedApp()}> 
+      <div className={"App"}> 
       <h1 className="menuText">
         <span><Link activeClass="active" to="LandingPage" spy={true} smooth={true} duration={500}>01</Link></span>/
         <span><Link activeClass="active" to="projectPage" spy={true} smooth={true} duration={500}>02</Link></span>/
         <span><Link activeClass="active" to="AboutPage" spy={true} smooth={true} duration={500}>03</Link></span>
       </h1>
         <Element name="LandingPage" className="landingPageContainer">
-      {/*<Menu 
-          right 
-          width={ '18%' } 
-          customBurgerIcon={ <img className="menuButton" src={menuButton}/> 
-          
-          }>
-            <h1 id="menuNamn"> William Martinsson </h1>
-            <a id="home" className="menu-item" href="/">Home</a>
-            <a id="about" className="menu-item" href="/about"><Link activeClass="active" to="projectPage" spy={true} smooth={true} duration={500}>About </Link></a>
-            <a id="contact" className="menu-item" href="/">Contact</a>
-            <a id="Behance" className="menu-item" href="https://www.behance.net/William_mae68a">Behance</a>
-            <a id="Medium" className="menu-item" href="https://medium.com/@marwil1996">Medium</a>
-      </Menu> */}
           <div className="rubrikContainer"> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
             <TextLoop children={["Digital Designer", "Frontend Dev", "Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
             <span className='lowOpacity'>based in Gothenburg</span></span> </h1>
           </div>
           <Link activeClass="active" className="arrowContainer" to="projectPage" spy={true} smooth={true} duration={500} >
-            <img className="downArrow bounce" src={arrowImage}/>
+            <img className="downArrow bounce" src={arrowImage} alt="down arrow"/>
           </Link>
         </Element>
-        <ProjectPage woperFunction={this.changeAppState.bind(this)} />
+        <ProjectPage/>
          <About/>
           <div className="footerContainer"> 
             <div className="footerLinkContainer">
@@ -86,6 +62,18 @@ componentDidMount() {
               <br/> <a href="https://github.com/Marwil96">Github</a> </h2>
             </div>
           </div>
+      </div>
+      )
+  }
+
+componentDidMount() {
+  setTimeout(() => this.setState({ loading: false }), 1000);
+}
+
+  render() {
+    return (
+      <div>
+        {this.pageRender(this.state.loading)}
       </div>
     );
   }

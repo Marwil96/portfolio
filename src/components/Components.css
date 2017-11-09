@@ -4,7 +4,15 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 .App {
   flex-direction:column;
   display: flex;
@@ -294,8 +302,8 @@ a {
   background-color: #263776;
 }
 .projectx2 {
-  color: #172ad8;
-  background-color: #80bbe5;
+  color: #fdd8bb;
+  background-color: #5345e4;
 }
 .footerContainer {
   height: 3.3%;

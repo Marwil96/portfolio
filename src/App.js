@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {
   HashRouter as Router,
   Route,
-  Link,
-  Redirect,
   Switch,
-  push
 } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import { spring, AnimatedRoute } from 'react-router-transition';

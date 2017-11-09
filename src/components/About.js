@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
-import TextLoop from 'react-text-loop';
-import arrowImage from './download.svg';
-import menuButton from './menu.svg';
-import { slide as Menu } from 'react-burger-menu';
-import {scroller, Element, Link} from 'react-scroll';
-import PostIt from './common/PostIt';
+import { Element} from 'react-scroll';
 
 
 
