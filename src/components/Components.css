@@ -25,7 +25,6 @@ a {
   width: 100%;
   position: absolute;
   background-color: #F5F5F5;
-  transform: translate3d(0px, 0px);
 }
 .fixed {
   position: fixed;
@@ -55,6 +54,7 @@ a {
   font-size: 40px;
   font-weight: 500;
   animation: ease-in-out 0.2;
+  transition: font-size 0.15s ease-in-out;
 }
 .landingPageContainer {
   /*height: 26.8%;*/
