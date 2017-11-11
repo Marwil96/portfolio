@@ -1,5 +1,9 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+* {
+  min-height: 0;
+  min-width: 0;
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -243,7 +247,7 @@ a {
   display: flex;
   justify-content: center;
   height: 250px;
-  min-width: 300px;
+  max-width: 300px;
   width: 10%;
   margin-top: 1%;
   margin-left: 1%;
@@ -364,7 +368,7 @@ a {
 
 @media (max-width: 780px) {
   .rubrikText {
-    font-size: 107%;
+    font-size: 104%;
 }
 .bigHello {
     font-size: 150%;
@@ -384,12 +388,38 @@ a {
   height: 134vh;
   flex:none;
 }
+.projectBoxRubrik {
+  font-size: 212%;
+}
+.projectBoxMinorRubrik {
+  font-size: 104%;
+}
+.projectBoxUnderRubrik {
+  font-size: 172%;
+}
+.projectBoxText {
+  font-size: 110%;
+}
 
 }
-@media (max-width: 330px) {
-.sliderContainer {
-  min-width: 255px;
+@media (max-width: 370px) {
+.aboutPageContainer {
+  height: 134vh;
+  flex:none;
 }
+.projectBoxRubrik {
+  font-size: 182%;
+}
+.projectBoxMinorRubrik {
+  font-size: 94%;
+}
+.projectBoxUnderRubrik {
+  font-size: 152%;
+}
+.projectBoxText {
+  font-size: 100%;
+}
+
 }
 
 

@@ -10,7 +10,7 @@ var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 4
+      slidesToShow: 1
     };
 
 class LandingPage extends Component {
@@ -42,7 +42,7 @@ class LandingPage extends Component {
         <Element name="LandingPage" className="landingPageContainer">
           <div className="rubrikContainer"> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
-            <TextLoop children={["Digital Designer", "Frontend Dev", "Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
+            <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
             <span className='lowOpacity'>based in Gothenburg</span></span> </h1>
           </div>
           <Link activeClass="active" className="arrowContainer" to="projectPage" spy={true} smooth={true} duration={500} >

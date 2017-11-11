@@ -10,7 +10,9 @@ var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 4
+      slidesToShow: 3,
+      swipe: true,
+      responsive: [ { breakpoint: 768, settings: { slidesToShow: 1.5 } }, { breakpoint: 360, settings: { slidesToShow: 1 } }]
     };
 
 class ProjectPage extends Component {
