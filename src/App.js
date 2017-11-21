@@ -12,6 +12,7 @@ import About from './components/About';
 import ProjectPage from './components/ProjectPage';
 import ProjectPortfolio from './components/projects/ProjectPortfolio';
 import ProjectInfographic from './components/projects/ProjectInfographic';
+import ProjectStarvation from './components/projects/ProjectStarvation';
 
 const history = createHistory();
 function mapStyles(styles) {
@@ -113,6 +114,9 @@ class App extends Component {
       atLeave={{ offset: -100 }}
       atActive={{ offset: 0 }} />
       <AnimatedRoute path="/projectInfographic" component={ProjectInfographic} atEnter={{ offset:0 }}
+      atLeave={{ offset: -100 }}
+      atActive={{ offset: 0 }} />
+      <AnimatedRoute path="/projectStarvation" component={ProjectStarvation} atEnter={{ offset:0 }}
       atLeave={{ offset: -100 }}
       atActive={{ offset: 0 }} />
       </Switch>

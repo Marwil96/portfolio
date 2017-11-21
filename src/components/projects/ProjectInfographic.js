@@ -53,7 +53,7 @@ class ProjectInfographic extends Component {
           <h2 className="secondImgText">Take in the information fast with the help of the colors.</h2>
         </div>
         <div class="greyImgBackground"> <img className="projectImage"src={secondImage} /> </div>
-        <Link to="/projectPortfolio">
+        <Link to="/projectStarvation">
             <img className="rightArrow" src={arrowImage}/>
       </Link>
       <Link to="/projectPortfolio">
