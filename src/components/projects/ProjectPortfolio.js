@@ -56,7 +56,7 @@ componentDidMount() {
           <h2 className="secondImgText">Quick Information about myself.</h2>
         </div>
         <div class="whiteImgBackground"> <img className="projectImage"src={AboutPageImage} /> </div>
-        <Link to="/projectInfographic">
+        <Link to="/projectThrive">
             <img className="rightArrow" src={arrowImage}/>
       </Link>
       <Link to="/projectStarvation">

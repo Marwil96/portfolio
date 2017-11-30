@@ -1,3 +1,4 @@
+
 .projectInfoContainer {
 	display: flex;
     position: relative;
@@ -105,6 +106,17 @@ h4 {
 	display: block;
 	margin-right: auto;
 }
+.highVideo {
+ max-height: 612px;
+ max-width: 100%;
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+  background: #F5F5F5;
+}
+.highImage {
+  max-height: 600px;
+}
 .imgInfoContainerLeft {
   align-self: flex-start;
   margin-left: 12.5%;
@@ -148,6 +160,7 @@ h4 {
   }
   .projectImage {
     max-width: 100%;
+    max-height: 100%;
   }
   .projectInfoRubrik {
     font-size: 193%;

@@ -56,7 +56,7 @@ class ProjectInfographic extends Component {
         <Link to="/projectStarvation">
             <img className="rightArrow" src={arrowImage}/>
       </Link>
-      <Link to="/projectPortfolio">
+      <Link to="/projectThrive">
             <img className="leftArrow" src={arrowImage}/>
       </Link>
       </Element>

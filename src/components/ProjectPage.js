@@ -35,6 +35,12 @@ class ProjectPage extends Component {
               <h2 className="projectBoxUnderRubrik">Show my self</h2>
               <h3 className="projectBoxText">An Portfolio page that shows my work</h3>
             </Link>
+            <Link  to='/projectThrive' className="sliderContainer project1">
+              <h3 className="projectBoxMinorRubrik"> Design </h3>
+              <h1 className="projectBoxRubrik">T H R I V E</h1>
+              <h2 className="projectBoxUnderRubrik">Education</h2>
+              <h3 className="projectBoxText">Make a campain site</h3>
+            </Link>
             <Link to='/projectInfographic' className="sliderContainer projectx2">
               <h3 className="projectBoxMinorRubrik"> Design </h3>
               <h1 className="projectBoxRubrik">Infographic</h1>
@@ -51,13 +57,7 @@ class ProjectPage extends Component {
 
           <h1 className="projectSubheaderText subheaderPosition2"><span className="projectSubheader"> On The Way </span></h1>
           <Slider {...settings} className="slider">
-            <div className="sliderContainer project1">
-              <h3 className="projectBoxMinorRubrik"> Design </h3>
-              <h1 className="projectBoxRubrik">T H R I V E</h1>
-              <h2 className="projectBoxUnderRubrik">Education</h2>
-              <h3 className="projectBoxText">Make a campain site</h3>
-            </div>
-            <Link to='/projectPortfolio' className="sliderContainer project2">
+            <Link to='/projectReporter' className="sliderContainer project2">
               <h3 className="projectBoxMinorRubrik"> Developer </h3>
               <h1 className="projectBoxRubrik">Reporter</h1>
               <h2 className="projectBoxUnderRubrik">Errors</h2>

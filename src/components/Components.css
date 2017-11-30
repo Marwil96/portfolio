@@ -393,16 +393,22 @@ a {
   flex:none;
 }
 .projectBoxRubrik {
-  font-size: 212%;
+  font-size: 202%;
 }
 .projectBoxMinorRubrik {
   font-size: 104%;
 }
 .projectBoxUnderRubrik {
-  font-size: 172%;
+  font-size: 152%;
 }
 .projectBoxText {
-  font-size: 110%;
+  font-size: 100%;
+}
+.sliderContainer:hover {
+  transform: none; 
+}
+.sliderContainer:active {
+  transform: scale(1.1); 
 }
 
 }
