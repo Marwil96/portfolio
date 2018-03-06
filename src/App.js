@@ -58,7 +58,7 @@ class App extends Component {
     }
     return (
        <div>
-     <div onClick={this.navigationOn.bind(this)} id="menuToggle">
+     <div onClick={this.navigationOn.bind(this)} id="menuToggle" style={{position:"fixed"}}>
     <input type="checkbox" />
     <span style={{background:"black"}}></span>
     <span style={{background:"black"}}></span>
