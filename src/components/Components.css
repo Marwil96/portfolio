@@ -8,6 +8,76 @@ a {
     color: inherit;
     text-decoration: none;
 }
+.dark {
+  filter:brightness(0.6);
+}
+.navigation {
+    position: fixed;
+    top: 0;
+    /* height: 100vh; */
+    z-index: 9;
+    width: 100%;
+    right: 0;
+    left:0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 0;
+    height: 0%;
+    background: #000;
+    overflow: hidden;
+    -webkit-transition: all .5s cubic-bezier(.23,1,.32,1);
+    transition: all .5s cubic-bezier(.23,1,.32,1);
+}
+.navigationActive {
+  height: 100%;
+}
+.navigationClose {
+  color: white;
+  font-size: 70px;
+  font-family: 'Roboto Mono', monospace;
+  width: 35%;
+  height: 100%;
+  font-weight: 700;
+  text-align: left;
+}
+.navigationProjectContainer {
+  display: flex;
+  width: 54%;
+  height: 50%;
+  right: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.navigationProject {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 55px;
+  width: 30%;
+  height: 100%;
+  text-align: left;
+}
+.navigationProjectSubHeader {
+  color: white;
+  margin-bottom: -5%;
+  font-size: 20px;
+  width: 30%;
+  height: 100%;
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+}
+.navigationButtons {
+  display: flex;
+  width: 36%;
+  height: 60%;
+  right: 0;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -18,12 +88,7 @@ a {
                                   supported by Chrome and Opera */
 }
 .App {
-  flex-direction:column;
-  display: flex;
-  justify-content: flex-start;
-  height: 452%;
   width: 100%;
-  position: absolute;
   background-color: #F5F5F5;
 }
 .fixed {
@@ -38,6 +103,86 @@ a {
 .moveToMeny {
   transform: translate3d(0px, -100%, 0px);
 }*/
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  opacity:0.9;
+  border-radius: 3px;
+  
+  z-index: 10000;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+/*#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+/*#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}*/
 
 .menuText {
   position: fixed;
@@ -51,25 +196,23 @@ a {
   cursor: pointer;
 }
 .active {
-  font-size: 40px;
-  font-weight: 500;
   animation: ease-in-out 0.2;
-  transition: font-size 0.15s ease-in-out;
+  transition: font-size 0.3s ease-in-out;
 }
 .landingPageContainer {
   /*height: 26.8%;*/
   width: 100%;
   position: relative;
-  flex:1;
-  display: flex;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   border-bottom: 1px solid black;
 }
 
 .rubrikContainer {
-  margin-left: 10%;
+ /* margin-left: 10%;*/
   justify-content: center;
-  height: 100%;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -109,9 +252,9 @@ a {
     -ms-flex-item-align: end;
     justify-self: center;
     position: absolute;
-    height: 100%;
     justify-content: flex-end;
     width: 100%;
+    bottom: 0;
 }
 
 
@@ -207,9 +350,10 @@ a {
 .projectPageContainer {
  /* height: 33%;*/
   width: 100%;
-  flex:1.5;
   position: relative;
   display: flex;
+  height: 100vh;
+  justify-content: center;
   flex-direction: column;
   background-color: #F5F5F5;
   border-bottom: 1px solid black;
@@ -225,8 +369,9 @@ a {
 }
 .projectSubheader {
   background-color: #9b59b6;
-  margin-left: 8%;
+  margin-left: 12%;
   padding: 0.75% 3% 0.75% 3%;
+  margin-top: 70px;
 }
 .projectSubheaderText {
   font-size: 25px;
@@ -243,28 +388,48 @@ a {
     color:#ffffff;
 }
 .sliderContainer {
-  display: flex;
+  display: flex !important;
   justify-content: center;
-  height: 250px;
-  max-width: 300px;
-  width: 10%;
+  height: 60vh;
+  /*max-width: 300px;*/
+  /*width: 80vh !important;*/
   margin-top: 1%;
-  margin-left: 1%;
-  background: blue;
+ margin-left: 1%;
   transition: all .2s ease-in-out;
 }
-.sliderContainer:hover {
+.slideContainerColor {
+  width:80%;
+  background: #5345E4;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding:0;
+  color:#FDD8BB;
+  transition: all .2s ease-in-out;
+}
+.sliderContainer:hover .projectPageImage {
+  transform: scale(1.1); 
+}
+.sliderContainer:hover #mobil {
+  transform: rotate(0deg);
+}
+.sliderContainer:hover #dator {
+  transform: rotate(0deg);
+}
+.sliderContainer:hover .slideContainerColor {
   transform: scale(1.1); 
 }
 .slider {
-  margin-left: 5%;
-  width: 90%;
+  /*margin-left: 5%;*/
+  width: 100%;
 }
 .projectBoxRubrik {
   font-family: 'Roboto Mono', monospace;
-  font-size: 38px;
-  font-weight: 700;
-  text-align: center;
+    font-size: 60px;
+    width: 40%;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 25px;
 }
 .projectBoxMinorRubrik {
   font-family: 'Roboto Mono', monospace;
@@ -280,15 +445,43 @@ a {
   margin-top: 5%;
   font-weight: 500;
   text-align: center;
+  display: none;
+}
+.compMockup {
+  height: 100px;
+  widows: 100px;
+  background: red;
+  transition: all .2s ease-in-out;
+}
+
+.projectPageImage:hover {
+  transform: scale(1.1); 
+}
+.projectPageImage {
+  width: 81vh;
+  margin-left: 5%;
+  align-self: center;
+/*  margin-left: -50px;*/
+  position: absolute;
+}
+#mobil {
+  transform: rotate(-39deg);
+  transition: all .3s ease;
+}
+#dator {
+  transform: rotate(-5deg);
+  transition: all .2s ease-in-out;
 }
 .projectBoxText {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 400;
-  margin-top: -7%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+    text-align: left;
+    font-weight: 400;
+    margin-left: 25px;
+    width: 50%;
+    margin-top: -6%;
 }
-.project1 {
+/*.project1 {
   background-color: #B282AC;
   color: #d3eff6;
 }
@@ -311,16 +504,16 @@ a {
 .projectx3 {
   color: #5345e4;
   background-color: #fdd8bb;
-}
+}*/
 .footerContainer {
   height: 3.3%;
   min-height: 106px;
   width: 100%;
   position: absolute;
   display: flex;
-  bottom: 0;
   background-color: #323232;
   margin: 0;
+      bottom: 0;
   color: white;
   justify-content:space-around;
 }
@@ -370,6 +563,36 @@ a {
 
 
 @media (max-width: 780px) {
+  #menuToggle {
+    right: 32px;
+  }
+
+  .navigationActive {
+    flex-direction: column-reverse;
+}
+.navigationButtons {
+  width: 100%;
+  height: 50%;
+}
+.navigationClose {
+  width: 100%;
+  text-align: center;
+  font-size: 370%;
+}
+.navigationProject {
+    font-size: 300%;
+    width: 100%;
+    text-align: center;
+}
+.navigationProjectContainer {
+    height: 44%;
+}
+.navigationProjectSubHeader {
+    margin-bottom: -23%;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+}
 .rubrikText {
     font-size: 104%;
 }
@@ -379,36 +602,88 @@ a {
 .App {
   position: relative!important;
 }
+.arrowContainer {
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+}
 .landingPageContainer {
   height: 100vh;
   flex:none;
   border-bottom: 0px solid black;
 }
+.footerContainer {
+
+}
+.digitalDesigner {
+
+}
 .projectPageContainer {
-  height: 150vh;
+  height: 100vh;
   flex:none;
 }
 .aboutPageContainer {
-  height: 134vh;
   flex:none;
 }
 .projectBoxRubrik {
   font-size: 202%;
+  text-align: center;
+    margin-left: unset;
+    width: 90%
 }
 .projectBoxMinorRubrik {
-  font-size: 104%;
+  font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    margin-left: -15px;
+    /* margin-bottom: -3%; */
+    font-weight: 400;
+    position: absolute;
+    align-self: flex-end;
+    top: 8%;
+    width: 70%;
 }
 .projectBoxUnderRubrik {
-  font-size: 152%;
+  font-size: 202%;
+    width: 40%;
+    font-weight: 700;
+    text-align: center;
+    margin-left: unset;
 }
 .projectBoxText {
-  font-size: 100%;
+  font-size: 150%;
+  text-align: center;
+  margin-left: unset;
+  width: 80%;
+  margin-bottom: 13%;
 }
-.sliderContainer:hover {
+.slideContainerColor:hover {
   transform: none; 
 }
-.sliderContainer:active {
+.slideContainerColor:active {
   transform: scale(1.1); 
+}
+.slideContainerColor {
+  width: unset;
+  margin-left: 10px;
+  margin-right: 10px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 9px;
+}
+.sliderContainer {
+   margin-left: unset;
+   display: block !important;
+}
+.projectPageImage {
+  width: 30vh;
+  margin-left: unset;
+  align-self: flex-end;
+  display: none;
+}
+.aboutRubrik {
+    margin: 9vh 0 0 0 !important;
 }
 
 }
@@ -429,7 +704,15 @@ a {
 .projectBoxText {
   font-size: 100%;
 }
-
+.aboutUnderRubrik {
+  display: none!important;
+}
+.aboutRubrik {
+  display: none!important;
+}
+.infoWindow {
+    margin-top: 11%;
+  }
 }
 
 

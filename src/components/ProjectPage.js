@@ -5,65 +5,61 @@ import {
 } from 'react-router-dom';
 import Slider from 'react-slick';
 import {Element} from 'react-scroll';
-
+import firstImage from '../img/KnowelMacbookMockup.png';
+import secondImage from '../img/ThriveMobilMockup.png';
+import thirdImage from '../img/KnowelMacbookMockup.png';
+var data = [
+  {projectBoxRubrik:"Knowel", projectBoxText:"A text about the future of Apps",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectKnowel#1", subject:"Developer & Design", id:"dator"},
+  {projectBoxRubrik:"Thrive", projectBoxText:"Make a campain site", color:"#AEF2F0", backgroundColor:"#263776", image:secondImage, link:"/projectThrive", subject:"Design", id:"mobil"},
+  {projectBoxRubrik:"Concept Site", projectBoxText:"How to use flinto", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectStarvation", subject:"Design", id:"dator"},
+]
+let dragging = false;
 var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 3,
+      arrows: false,
+      slidesToShow: 1.3,
       swipe: true,
-      responsive: [ { breakpoint: 768, settings: { slidesToShow: 1.5 } }, { breakpoint: 360, settings: { slidesToShow: 1 } }]
+      swipeToSlide: true,
+       beforeChange: () => dragging = true,
+      afterChange: () => dragging = false,
+      responsive: [ { breakpoint: 768, settings: { slidesToShow: 1, centerMode:true, infinite: true, initialSlide: 0 } }, { breakpoint: 360, settings: { slidesToShow: 1,centerMode:true, infinite: true, initialSlide: 0 } }]
     };
 
 class ProjectPage extends Component {
   showSettings (event) {
     event.preventDefault();
   }
-
+  sliderContainerCreator(data) {
+    var i;
+      console.log("wop")
+      return(
+         <Link to={data.link} className="sliderContainer projectx1" onClick={(e)=> dragging && e.preventDefault()}>
+              <div style={{backgroundColor:data.backgroundColor}} className="slideContainerColor">
+                <h3 style={{color:data.color}} className="projectBoxMinorRubrik"> {data.subject} </h3>
+                <h1 style={{color:data.color}} className="projectBoxRubrik">{data.projectBoxRubrik}</h1>
+                <h2 style={{color:data.color}} className="projectBoxUnderRubrik">Show my self</h2>
+                <h3 style={{color:data.color}} className="projectBoxText">{data.projectBoxText}</h3>
+              </div>
+              <img className="projectPageImage" id={data.id} src={data.image}/>
+              <div className="compMockup">
+               </div>
+            </Link>
+      
+        )
+    }
+  
 
   render() {
     return (
       <Element name="projectPage" className="projectPageContainer">
-          <h1 className="projectRubrik"> Projects </h1>
           <h1 className="projectSubheaderText ">
-          <span className="projectSubheader projectSubheaderColor2"> Done </span></h1>
+          <span className="projectSubheader projectSubheaderColor2"> Projects </span></h1>
 
           <Slider {...settings} className="slider">
-          <Link to='/projectPortfolio' className="sliderContainer projectx1">
-              <h3 className="projectBoxMinorRubrik"> Developer & Design </h3>
-              <h1 className="projectBoxRubrik">Portfolio</h1>
-              <h2 className="projectBoxUnderRubrik">Show my self</h2>
-              <h3 className="projectBoxText">An Portfolio page that shows my work</h3>
-            </Link>
-            <Link  to='/projectThrive' className="sliderContainer project1">
-              <h3 className="projectBoxMinorRubrik"> Design </h3>
-              <h1 className="projectBoxRubrik">T H R I V E</h1>
-              <h2 className="projectBoxUnderRubrik">Education</h2>
-              <h3 className="projectBoxText">Make a campain site</h3>
-            </Link>
-            <Link to='/projectInfographic' className="sliderContainer projectx2">
-              <h3 className="projectBoxMinorRubrik"> Design </h3>
-              <h1 className="projectBoxRubrik">Infographic</h1>
-              <h2 className="projectBoxUnderRubrik">Unequal</h2>
-              <h3 className="projectBoxText">How to show unequal disability allowance</h3>
-            </Link>
-            <Link to='/projectStarvation' className="sliderContainer projectx3">
-              <h3 className="projectBoxMinorRubrik"> Design </h3>
-              <h1 className="projectBoxRubrik">Concept Site</h1>
-              <h2 className="projectBoxUnderRubrik">Starvation</h2>
-              <h3 className="projectBoxText">Concept site about the phases of starvation</h3>
-            </Link>
-          </Slider>
-
-          <h1 className="projectSubheaderText subheaderPosition2"><span className="projectSubheader"> On The Way </span></h1>
-          <Slider {...settings} className="slider">
-            <Link to='/projectReporter' className="sliderContainer project2">
-              <h3 className="projectBoxMinorRubrik"> Developer </h3>
-              <h1 className="projectBoxRubrik">Reporter</h1>
-              <h2 className="projectBoxUnderRubrik">Errors</h2>
-              <h3 className="projectBoxText">An Service built on<br/> react and react native</h3>
-            </Link>
-           
+         
+            {data.map(data => (this.sliderContainerCreator(data)))}
           </Slider>
           
         </Element>
