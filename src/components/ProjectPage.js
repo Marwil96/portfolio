@@ -9,7 +9,7 @@ import firstImage from '../img/KnowelMacbookMockup.png';
 import secondImage from '../img/ThriveMobilMockup.png';
 import thirdImage from '../img/KnowelMacbookMockup.png';
 var data = [
-  {projectBoxRubrik:"Knowel", projectBoxText:"A text about the future of Apps",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectKnowel#1", subject:"Developer & Design", id:"dator"},
+  {projectBoxRubrik:"Knowel", projectBoxText:"A completely new identity & website",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectKnowel#1", subject:"Developer & Design", id:"dator"},
   {projectBoxRubrik:"Thrive", projectBoxText:"Make a campain site", color:"#AEF2F0", backgroundColor:"#263776", image:secondImage, link:"/projectThrive", subject:"Design", id:"mobil"},
   {projectBoxRubrik:"Concept Site", projectBoxText:"How to use flinto", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectStarvation", subject:"Design", id:"dator"},
 ]

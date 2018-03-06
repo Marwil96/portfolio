@@ -40,7 +40,7 @@ class App extends Component {
   }
   whatLink(url) {
     console.log(url, "YO")
-    if(url === "http://localhost:3000/" || "http://localhost:3000/#Home" || "http://localhost:3000/#Projects" ) {
+    if(url === window.location.origin+"/" || window.location.origin +"/#Home" ||  window.location.origin + "/#Projects" ) {
               return (
                 <a href="#About" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</a>)
             }
