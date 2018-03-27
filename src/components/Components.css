@@ -8,6 +8,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
+h1 h2 h3 p div a {
+  font-family: 'Poppins', sans-serif;
+}
 .dark {
   filter:brightness(0.6);
 }
@@ -35,7 +38,7 @@ a {
 .navigationClose {
   color: white;
   font-size: 70px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   width: 35%;
   height: 100%;
   font-weight: 700;
@@ -52,7 +55,7 @@ a {
 }
 .navigationProject {
   color: white;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 55px;
   width: 30%;
@@ -62,11 +65,12 @@ a {
 .navigationProjectSubHeader {
   color: white;
   margin-bottom: -5%;
-  font-size: 20px;
+  font-size: 28px;
+  text-decoration: underline;
   width: 30%;
   height: 100%;
   text-align: left;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 .navigationButtons {
   display: flex;
@@ -190,7 +194,7 @@ a {
   top: 5%;
   right: 10%;
   font-size: 30px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   opacity: 0.76;
   cursor: pointer;
@@ -225,6 +229,7 @@ a {
 }
 .digitalDesigner {
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   background-color: #2980B9;
   opacity: 1 !important;
@@ -362,7 +367,7 @@ a {
 .projectRubrik {
   text-align: center;
   font-size: 55px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   opacity: 0.76;
   text-decoration:underline;
@@ -375,8 +380,8 @@ a {
 }
 .projectSubheaderText {
   font-size: 25px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   color: #ffffff;
 
 }
@@ -424,7 +429,7 @@ a {
   width: 100%;
 }
 .projectBoxRubrik {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Poppins', sans-serif;
     font-size: 60px;
     width: 40%;
     font-weight: 700;
@@ -506,10 +511,8 @@ a {
   background-color: #fdd8bb;
 }*/
 .footerContainer {
-  height: 3.3%;
-  min-height: 106px;
   width: 100%;
-  position: absolute;
+  height: 100%;
   display: flex;
   background-color: #323232;
   margin: 0;
@@ -517,8 +520,11 @@ a {
   color: white;
   justify-content:space-around;
 }
+.largeContactMeButton {
+  font-size: 1100%;
+}
 .footerLinkContainer {
-   height: 100%;
+   height: 95%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -527,10 +533,10 @@ a {
     font-size: 20px;
     margin-right: 0%;
     text-align: left;
-    align-items: center;
+    align-items: flex-end;
 }
 .footerContactContainer {
-     height: 100%;
+     height: 95%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -539,21 +545,19 @@ a {
     font-size: 20px;
     margin-right: 0%;
     text-align: right;
-    align-items: center;
+    align-items: flex-end;
 }
 .footerLinkText {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   margin:0;
-  text-decoration:underline;
   cursor:pointer;
 }
 
 .footerContactText {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   margin:0;
-  text-decoration:underline;
   cursor:pointer;
 }
 
@@ -573,6 +577,11 @@ a {
 .navigationButtons {
   width: 100%;
   height: 50%;
+}
+.largeContactMeButton {
+  font-size: 110px;
+  font-size: 500%;
+  margin-top: 38%;
 }
 .navigationClose {
   width: 100%;
@@ -685,6 +694,17 @@ a {
 .aboutRubrik {
     margin: 9vh 0 0 0 !important;
 }
+.footerLinkContainer {
+    height: 10%;
+    bottom: 2%;
+    position: absolute;
+}
+.footerContactContainer {
+    /* height: 95%; */
+    /* width: 10%; */
+    position: absolute;
+    bottom: 0;
+}
 
 }
 @media (max-width: 370px) {
@@ -692,6 +712,7 @@ a {
   height: 134vh;
   flex:none;
 }
+
 .projectBoxRubrik {
   font-size: 182%;
 }

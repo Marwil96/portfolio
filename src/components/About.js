@@ -8,23 +8,15 @@ class About extends Component {
   render() {
     return (
         <div className="aboutContainer">
-          <h1 className="aboutRubrik"> William Martinsson </h1>
-          <h2 className="aboutUnderRubrik"> Digital Designer </h2>
-          <div className="infoWindow"> 
-            <div className="textWindow"> 
-              <h1 className="textWindowRubrik" style={{marginLeft:"30px"}}> who? </h1>
-              <p className="textWindowText" style={{marginLeft:"30px"}}>Young dude from Skara, who has great intrest in digital visualisation. </p>
-            </div>
-            <div className="textWindow"> 
               <h1 className="textWindowRubrik" style={{textAlign:"center"}}> currently </h1>
-              <p className="textWindowText" style={{textAlign:"center"}}>Studying Digital Design At YRGO<br/>Learning WebGL<br/>Working on Reporter </p>
-            </div>
-            <div className="textWindow"> 
-              <h1 className="textWindowRubrik" style={{textAlign:"right", marginRight:"30px"}}> future? </h1>
-              <p className="textWindowText" style={{textAlign:"right", marginRight:"30px"}}>Keep learning about the future of the webb</p>
-            </div>
-          </div>
-          </div>
+          <div className="aboutTextContainer"> 
+            <h1 className="h1TextStyle"> About </h1>
+            <p className="pTextStyle"> I’m William Martinsson, a 21 years old Digital Designer who knows how to code from Gothenburg, Sweden. I’m currently studying digital design at YRGO. <br/><br/>
+          I can deliver the entire package from start to finish through my love for design while still having the ability to produce some nice looking code.
+          </p>
+          <p className="pTextStyle">Driven by my passion for digital, I try to learn and discover new things every day to create unique products & experiences. I constantly seek to reach feelings and emotions by giving much importance to the user experience. My eternal goal is to build products people love to use.</p>
+          </div>  
+        </div>
     );
   }
 }

@@ -58,28 +58,16 @@ class LandingPage extends Component {
          <About/>
          </Section>
          <Section>
-          <div className="infoWindow" style={{backgroundColor:"#E0BEBE"}}> 
-            <div className="textWindow"> 
-              <h1 className="textWindowRubrik" style={{marginLeft:"30px"}}> skills </h1>
-              <p className="textWindowText" style={{marginLeft:"30px",fontSize:"26px"}}>HTML<br/>CSS<br/>Javascript<br/>React<br/>React Native<br/>React Redux<br/>Responsive Webdesign</p>
-            </div>
-            <div className="textWindow"> 
-              <h1 className="textWindowRubrik" style={{textAlign:"center"}}> programs </h1>
-              <p className="textWindowText" style={{textAlign:"center",fontSize:"26px"}}>Sketch<br/>Illustrator<br/>Photoshop<br/>Aftereffects<br/>Flinto<br/>Genymotion<br/>Github<br/>Invision</p>
-            </div>
-            <div className="textWindow invsible" style={{justifyContent:"center"}}> 
-              <h1 className="textWindowContactMe"> <a href="https://williammartinsson.typeform.com/to/grsvRk">contact me</a> </h1>
-            </div>
-          </div>
           <div className="footerContainer"> 
+            <h1 className="largeContactMeButton" style={{textAlign:"center",position:"absolute", fontFamily: "Poppins, sans-serif"}}> <a href="https://williammartinsson.typeform.com/to/grsvRk">Contact Me!</a> </h1>
             <div className="footerLinkContainer">
               <h2 className="footerLinkText"> 
-               <a href="https://medium.com/@marwil1996">Medium</a><br/>
-               <a href="https://williammartinsson.typeform.com/to/grsvRk"> Contact </a></h2>
+               <a href="https://medium.com/@marwil1996">Medium</a>
+               <a style={{padding:"30px"}} href="https://williammartinsson.typeform.com/to/grsvRk">Contact</a></h2>
             </div>
             <div className="footerContactContainer">
-              <h2 className="footerContactText"><a href="https://www.behance.net/William_mae68a"> Behance</a>
-              <br/> <a href="https://github.com/Marwil96">Github</a> </h2>
+              <h2 className="footerContactText"><a href="https://www.behance.net/William_mae68a">Behance</a>
+               <a style={{padding:"30px"}} href="https://github.com/Marwil96">Github</a> </h2>
             </div>
           </div>
     </Section>

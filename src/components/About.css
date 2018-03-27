@@ -20,6 +20,24 @@ a {
   flex-direction: column;
   border-bottom: 1px solid black;
 }
+.aboutTextContainer {
+  margin-top: 12vh;
+  max-width: 400px;
+  margin-left: 10%;
+}
+.h1TextStyle {
+  font-size: 34px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  opacity: 0.85;
+  margin-bottom: -10px;
+}
+.pTextStyle {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  opacity: 0.85;
+}
 .menuContainer {
        display: -ms-flexbox;
     display: flex;
@@ -160,6 +178,10 @@ letter-spacing: 0.67px;
 }
 
 @media (max-width: 780px) {
+  .aboutTextContainer {
+    max-width: 90% ;
+    margin-left: 4% ;
+}
   .infoWindow {  
     background-color: #FFF793;
     -ms-flex-item-align: center;
@@ -209,4 +231,12 @@ letter-spacing: 0.67px;
     text-align: center!important;
     margin: 0 !important;
 }
+}
+@media (max-width: 320px) {
+.pTextStyle {
+    font-size: 12px;
+  }
+  .h1TextStyle {
+    font-size: 24px;
+  }
 }
