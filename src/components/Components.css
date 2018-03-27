@@ -704,6 +704,7 @@ h1 h2 h3 p div a {
     /* width: 10%; */
     position: absolute;
     bottom: 0;
+    height: 0;
 }
 
 }
