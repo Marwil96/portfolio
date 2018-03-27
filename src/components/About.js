@@ -8,7 +8,6 @@ class About extends Component {
   render() {
     return (
         <div className="aboutContainer">
-              <h1 className="textWindowRubrik" style={{textAlign:"center"}}> currently </h1>
           <div className="aboutTextContainer"> 
             <h1 className="h1TextStyle"> About </h1>
             <p className="pTextStyle"> I’m William Martinsson, a 21 years old Digital Designer who knows how to code from Gothenburg, Sweden. I’m currently studying digital design at YRGO. <br/><br/>
