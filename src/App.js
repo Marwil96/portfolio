@@ -22,6 +22,10 @@ import ProjectKnowel from './components/projects/projectKnowel';
 
 ReactGA.initialize('UA-37970043-2'); //Unique Google Analytics tracking number
 const history = createHistory();
+history.listen((location, action) => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
 
 class App extends Component {
   constructor(props) {
@@ -114,7 +118,7 @@ function fireTracking() {
 
 };
 const Main = () => (
-    <Switch onUpdate={fireTracking()}>
+    <Switch history={history}>
       <Route exact path="/" component={Home}/>
       <Route path="/projectThrive" component={ProjectThrive}/>
       <Route path="/projectKnowel" component={ProjectKnowel}/>
