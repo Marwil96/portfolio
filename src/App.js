@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import { spring, AnimatedRoute } from 'react-router-transition';
+import ReactGA from 'react-ga';
 import LandingPage from './components/LandingPage';
 import About from './components/About';
 import ProjectPage from './components/ProjectPage';
@@ -18,6 +19,8 @@ import ProjectReporter from './components/projects/ProjectReporter';
 import ProjectThrive from './components/projects/ProjectThrive';
 import ProjectKnowel from './components/projects/projectKnowel';
 
+
+ReactGA.initialize('UA-37970043-2'); //Unique Google Analytics tracking number
 const history = createHistory();
 
 class App extends Component {
@@ -39,7 +42,6 @@ class App extends Component {
     this.setState({nav:"navigation", app:"App"})
   }
   whatLink(url) {
-    console.log(url, "YO")
     if(url === window.location.origin+"/" || window.location.origin +"/#Home" ||  window.location.origin + "/#Projects" ) {
               return (
                 <a href="#About" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</a>)
@@ -106,8 +108,13 @@ const Home = () => (
 const Abouter = () => (
   <ProjectThrive/>
   )
+function fireTracking() {
+    ReactGA.pageview(window.location.hash);
+    console.log("Analytics Update")
+
+};
 const Main = () => (
-    <Switch>
+    <Switch onUpdate={fireTracking()}>
       <Route exact path="/" component={Home}/>
       <Route path="/projectThrive" component={ProjectThrive}/>
       <Route path="/projectKnowel" component={ProjectKnowel}/>

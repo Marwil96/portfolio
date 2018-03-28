@@ -665,11 +665,11 @@ h1 h2 h3 p div a {
   width: 80%;
   margin-bottom: 13%;
 }
-.slideContainerColor:hover {
+.sliderContainer:hover .slideContainerColor {
   transform: none; 
 }
-.slideContainerColor:active {
-  transform: scale(1.1); 
+.sliderContainer:active .slideContainerColor {
+  transform: none;
 }
 .slideContainerColor {
   width: unset;

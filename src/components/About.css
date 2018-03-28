@@ -232,7 +232,7 @@ letter-spacing: 0.67px;
     margin: 0 !important;
 }
 }
-@media (max-width: 359px) {
+@media (max-width: 365px) {
 .pTextStyle {
     font-size: 12px;
   }

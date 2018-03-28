@@ -33,7 +33,6 @@ class ProjectPage extends Component {
   }
   sliderContainerCreator(data) {
     var i;
-      console.log("wop")
       return(
          <Link to={data.link} className="sliderContainer projectx1" onClick={(e)=> dragging && e.preventDefault()}>
               <div style={{backgroundColor:data.backgroundColor}} className="slideContainerColor">
