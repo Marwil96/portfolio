@@ -14,6 +14,10 @@ var data = [
   {projectBoxRubrik:"Concept Site", projectBoxText:"How to use flinto", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectStarvation", subject:"Design", id:"dator"},
 ]
 let dragging = false;
+const location = {
+  pathname: '/somewhere',
+  state: { fromDashboard: true }
+}
 var settings = {
       dots: false,
       infinite: false,
@@ -26,10 +30,14 @@ var settings = {
       afterChange: () => dragging = false,
       responsive: [ { breakpoint: 768, settings: { slidesToShow: 1, centerMode:true, infinite: true, initialSlide: 0 } }, { breakpoint: 360, settings: { slidesToShow: 1,centerMode:true, infinite: true, initialSlide: 0 } }]
     };
-
+console.log("project")
 class ProjectPage extends Component {
   showSettings (event) {
     event.preventDefault();
+  }
+  toProjectPage() {
+    <Link to="/somewhere"/>
+    console.log("toProjectPage")
   }
   sliderContainerCreator(data) {
     var i;
@@ -54,7 +62,7 @@ class ProjectPage extends Component {
     return (
       <Element name="projectPage" className="projectPageContainer">
           <h1 className="projectSubheaderText ">
-          <span className="projectSubheader projectSubheaderColor2"> Projects </span></h1>
+          <span className="projectSubheader projectSubheaderColor2" onClick={this.toProjectPage}> Projects </span></h1>
 
           <Slider {...settings} className="slider">
          

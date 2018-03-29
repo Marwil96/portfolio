@@ -48,7 +48,7 @@ class App extends Component {
   whatLink(url) {
     if(url === window.location.origin+"/" || window.location.origin +"/#Home" ||  window.location.origin + "/#Projects" ) {
               return (
-                <a href="#About" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</a>)
+                <a href="#/#About" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</a>)
             }
             else {
              return (<Link to="/" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</Link>)  

@@ -29,7 +29,7 @@ import visualImage11 from '../../img/Knowel/future.png';
 
 let options = {
       sectionClassName:     'section',
-      anchors:              ['1', '2', '3','4','5','6','7','8','9','10','11','12'],
+      anchors:              ['/projectKnowel/#1', '/projectKnowel/#2', '/projectKnowel/#3','/projectKnowel/#4','/projectKnowel/#5','/projectKnowel/#6','/projectKnowel/#7','/projectKnowel/#8','/projectKnowel/#9','/projectKnowel/#10','/projectKnowel/#11','/projectKnowel#/12'],
       scrollBar:            false,
       navigation:           false,
       lockAnchors: false,
@@ -308,57 +308,57 @@ class projectKnowel extends Component {
 
     scrolli() {
       console.log(window.location.hostname + "/ww")
-      if(window.location.href === window.location.origin +"/projectKnowel#2") {
+      if(window.location.href === window.location.origin +"/#/projectKnowel/#2") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(100vh/12)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#3") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#3") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*2)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#4") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#4") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*3)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#5") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#5") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*4)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#6") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#6") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*5)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#7") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#7") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*6)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#8") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#8") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*7)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#9") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#9") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*8)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#10") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#10") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*9)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#11") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#11") {
         return (
           <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*10)"} }> </div>
           )
       }
-      else if(window.location.href === window.location.origin +"/projectKnowel#12") {
+      else if(window.location.href === window.location.origin +"/#/projectKnowel/#12") {
         return (
          <a href="#10"> <div className="scrollPart" style={{height:"calc(100%/12)", background:"#5345E4", marginTop:"calc(8.33333vh*11)"} }> </div></a>
           )
@@ -367,14 +367,14 @@ class projectKnowel extends Component {
     }
 
     scrollWheel() {
-      if(window.location.href !== window.location.origin +"/projectKnowel#1" ){
+      if(window.location.href !== window.location.origin +"/#/projectKnowel/#1" ){
     return(
       <div>
       
       <div class="scroll"> 
       {this.scrolli()}
       {data.map((data, i) => (
-         <a href={"#"+(i+1)}> <div className="scrollLinks" id={i} style={{height:"calc(100%/12)", background:"#F7E0BC"} }> </div></a>
+         <a href={"/#/projectKnowel/#"+(i+1)}> <div className="scrollLinks" id={i} style={{height:"calc(100%/12)", background:"#F7E0BC"} }> </div></a>
         ))}
       </div>
       </div>

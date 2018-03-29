@@ -18,7 +18,7 @@ var settings = {
 
     let options = {
       sectionClassName:     'section',
-      anchors:              ['Home', 'Projects', 'About','Skills'],
+      anchors:              ['/#Home', '/#Projects', '/#About','/#Skills'],
       scrollBar:            false,
       navigation:           false,
       lockAnchors: false,
