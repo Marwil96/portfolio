@@ -234,9 +234,11 @@ letter-spacing: 0.67px;
 }
 @media (max-width: 365px) {
 .pTextStyle {
-    font-size: 12px;
+    /*font-size: 12px;*/
+    font-size: 80%;
   }
   .h1TextStyle {
-    font-size: 24px;
+    /*font-size: 24px;*/
+        font-size: 160%;
   }
 }

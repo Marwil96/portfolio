@@ -47,7 +47,7 @@ class LandingPage extends Component {
             <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
             <span className='lowOpacity'>based in Gothenburg</span></span> </h1>
           </div>
-          <a activeClass="active" className="arrowContainer" href="#Projects">
+          <a activeClass="active" className="arrowContainer" href="#/#Projects">
             <img className="downArrow bounce" src={arrowImage} alt="down arrow"/>
           </a>
         </Section>
