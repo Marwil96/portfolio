@@ -139,7 +139,7 @@ class projectKnowel extends Component {
             </div>
         </div>
         <div className="readMoreContainer">
-          <a href="#2"> <h2 className="readMoreText"> Read More </h2></a>
+          <a href="#/projectKnowel/#2"> <h2 className="readMoreText"> Read More </h2></a>
           <div className="readMoreLine"> </div>
         </div>
         </div>
