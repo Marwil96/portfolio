@@ -10,6 +10,7 @@ import createHistory from 'history/createBrowserHistory';
 import { spring, AnimatedRoute } from 'react-router-transition';
 import ReactGA from 'react-ga';
 import LandingPage from './components/LandingPage';
+import * as Scroll from 'react-scroll';
 import About from './components/About';
 import ProjectPage from './components/ProjectPage';
 import ProjectPortfolio from './components/projects/ProjectPortfolio';
@@ -26,7 +27,11 @@ history.listen((location, action) => {
   ReactGA.set({ page: location.pathname });
   ReactGA.pageview(location.pathname);
 });
-
+let ScrollerLink      = Scroll.Link;
+let Element    = Scroll.Element;
+let Events     = Scroll.Events;
+let scroll     = Scroll.animateScroll;
+let scrollSpy  = Scroll.scrollSpy;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,9 +51,9 @@ class App extends Component {
     this.setState({nav:"navigation", app:"App"})
   }
   whatLink(url) {
-    if(url === window.location.origin+"/" || window.location.origin +"/#Home" ||  window.location.origin + "/#Projects" ) {
+    if(url === window.location.origin+"/#/") {
               return (
-                <a href="#/#About" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</a>)
+                <ScrollerLink name="projectPage" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</ScrollerLink>)
             }
             else {
              return (<Link to="/" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</Link>)  
@@ -63,12 +68,12 @@ class App extends Component {
             <div className="dot"></div></div>);
     }
     return (
-       <div>
+       <div className="App">
      <div onClick={this.navigationOn.bind(this)} id="menuToggle" style={{position:"fixed"}}>
     <input type="checkbox" />
-    <span style={{background:"black"}}></span>
-    <span style={{background:"black"}}></span>
-    <span style={{background:"black"}}></span>
+    <span style={{background:"#5245e5"}}></span>
+    <span style={{background:"#5245e5"}}></span>
+    <span style={{background:"#5245e5"}}></span>
     </div>
      <div className={this.state.nav}> 
         <div className="navigationProjectContainer">

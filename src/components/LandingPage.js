@@ -1,32 +1,11 @@
 import React, { Component } from 'react';
 import './Components.css';
 import TextLoop from 'react-text-loop';
-import arrowImage from './download.svg';
-import {ScrollToTopOnMount ,SectionsContainer, Section} from 'react-fullpage';
-import {
-  Link
-} from 'react-router-dom';
+import arrowImage from '../img/Arrow.svg';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import About from './About';
 import ProjectPage from './ProjectPage';
 
-var settings = {
-      dots: false,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1
-    };
-
-    let options = {
-      sectionClassName:     'section',
-      anchors:              ['/#Home', '/#Projects', '/#About','/#Skills'],
-      scrollBar:            false,
-      navigation:           false,
-      lockAnchors: false,
-      verticalAlign:        false,
-      arrowNavigation:      true,
-      sectionPaddingTop:    '0', // the section top padding 
-      sectionPaddingBottom: '0', // the section bottom padding 
-    };
 
 class LandingPage extends Component {
   constructor(props) {
@@ -37,42 +16,44 @@ class LandingPage extends Component {
 
     };
   };
-
+  changeBackgroundColor() {
+    this.setState({ app: "b" })
+  }
   pageRender() {
     return(
-      <SectionsContainer {...options} className={this.state.app}> 
-        <Section className="landingPageContainer">
-        <h1 style={{position:"absolute", fontSize: "14px", left:"10%",top:"4%", width:"40%", fontFamily: 'Poppins', fontWeight: 400, opacity: 0.8 }}> William Martinsson - Digital Designer </h1>
+      <div> 
+        <Element name="landingPage" className="landingPageContainer newContainer">
+        <h1 style={{position:"absolute", color:"#5245e5", fontSize: "14px", left:"10%",top:"4%", width:"40%", fontFamily: 'Roboto Mono', fontWeight: 400}}> William Martinsson - Digital Designer </h1>
           <div className="rubrikContainer"> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
             <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
             <span className='lowOpacity'>based in Gothenburg</span></span> </h1>
           </div>
-          <a activeClass="active" className="arrowContainer" href="#/#Projects">
-            <img className="downArrow bounce" src={arrowImage} alt="down arrow"/>
-          </a>
-        </Section>
-        <Section>
+          <Link to="projectPage" activeClass="active" spy={true} smooth={true} offset={50} duration={500} className="arrowContainer">
+            <img style={{heigth:"50px"}} className="downArrow bounce" src={arrowImage} alt="down arrow"/>
+          </Link>
+        </Element>
+        <Element name="projectPage" onSetActive={this.changeBackgroundColor} >
         <ProjectPage/>
-        </Section>
-        <Section>
+        </Element>
+        <div className="newContainer">
          <About/>
-         </Section>
-         <Section>
+         </div>
+         <div className="newContainer">
           <div className="footerContainer"> 
             <h1 className="largeContactMeButton" style={{textAlign:"center",position:"absolute", fontFamily: "Poppins, sans-serif"}}> <a href="https://williammartinsson.typeform.com/to/grsvRk">Contact Me!</a> </h1>
             <div className="footerLinkContainer">
               <h2 className="footerLinkText"> 
                <a href="https://medium.com/@marwil1996">Medium</a>
-               <a style={{padding:"30px"}} href="https://williammartinsson.typeform.com/to/grsvRk">Contact</a></h2>
+               <a className="paddingNormal" href="https://williammartinsson.typeform.com/to/grsvRk">Contact</a></h2>
             </div>
             <div className="footerContactContainer">
               <h2 className="footerContactText"><a href="https://www.behance.net/William_mae68a">Behance</a>
-               <a style={{padding:"30px"}} href="https://github.com/Marwil96">Github</a> </h2>
+               <a className="paddingNormal" href="https://github.com/Marwil96">Github</a> </h2>
             </div>
           </div>
-    </Section>
-      </SectionsContainer>
+    </div>
+      </div>
       )
   }
 

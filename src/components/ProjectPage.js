@@ -3,9 +3,8 @@ import './Components.css';
 import {
   Link
 } from 'react-router-dom';
-import Slider from 'react-slick';
-import {Element} from 'react-scroll';
 import firstImage from '../img/KnowelMacbookMockup.png';
+import * as Scroll from 'react-scroll';
 import secondImage from '../img/ThriveMobilMockup.png';
 import thirdImage from '../img/KnowelMacbookMockup.png';
 var data = [
@@ -18,6 +17,11 @@ const location = {
   pathname: '/somewhere',
   state: { fromDashboard: true }
 }
+let ScrollerLink      = Scroll.Link;
+let Element    = Scroll.Element;
+let Events     = Scroll.Events;
+let scroll     = Scroll.animateScroll;
+let scrollSpy  = Scroll.scrollSpy;
 var settings = {
       dots: false,
       infinite: false,
@@ -42,17 +46,17 @@ class ProjectPage extends Component {
   sliderContainerCreator(data) {
     var i;
       return(
-         <Link to={data.link} className="sliderContainer projectx1" onClick={(e)=> dragging && e.preventDefault()}>
-              <div style={{backgroundColor:data.backgroundColor}} className="slideContainerColor">
+         <div className="sliderContainer projectx1">
+              <Link to={data.link} style={{backgroundColor:data.backgroundColor}} className="slideContainerColor">
                 <h3 style={{color:data.color}} className="projectBoxMinorRubrik"> {data.subject} </h3>
                 <h1 style={{color:data.color}} className="projectBoxRubrik">{data.projectBoxRubrik}</h1>
                 <h2 style={{color:data.color}} className="projectBoxUnderRubrik">Show my self</h2>
                 <h3 style={{color:data.color}} className="projectBoxText">{data.projectBoxText}</h3>
-              </div>
+              </Link>
               <img className="projectPageImage" id={data.id} src={data.image}/>
               <div className="compMockup">
                </div>
-            </Link>
+            </div>
       
         )
     }
@@ -60,16 +64,14 @@ class ProjectPage extends Component {
 
   render() {
     return (
-      <Element name="projectPage" className="projectPageContainer">
+      <div className="projectPageContainer">
           <h1 className="projectSubheaderText ">
           <span className="projectSubheader projectSubheaderColor2" onClick={this.toProjectPage}> Projects </span></h1>
 
-          <Slider {...settings} className="slider">
          
             {data.map(data => (this.sliderContainerCreator(data)))}
-          </Slider>
           
-        </Element>
+        </div>
     );
   }
 }
