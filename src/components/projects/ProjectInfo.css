@@ -252,9 +252,10 @@ body {
     margin-right: 10%;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
     font-family: 'Roboto Mono', monospace;
+
 }
 .sectionRubrik {
   margin-left: 5vh;
@@ -437,7 +438,31 @@ h4 {
 @media (max-height: 670px) {
   .sectionText {
     margin-left: 5vh;
-    font-size: 89%;
+    font-size: 102%;
+    width: unset;
+     margin-top: 2px;
+}
+.sectionRubrik {
+    margin-left: 5vh;
+    font-size: 150%;
+}
+  }
+  @media (max-height: 650px) {
+  .sectionText {
+    margin-left: 5vh;
+    font-size: 98%;
+    width: unset;
+     margin-top: 2px;
+}
+.sectionRubrik {
+    margin-left: 5vh;
+    font-size: 150%;
+}
+  }
+  @media (max-height: 570px) {
+  .sectionText {
+    margin-left: 5vh;
+    font-size: 86%;
     width: unset;
      margin-top: 2px;
 }
