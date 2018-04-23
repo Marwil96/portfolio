@@ -36,7 +36,7 @@ class LandingPage extends Component {
         <Element name="projectPage" onSetActive={this.changeBackgroundColor} >
         <ProjectPage/>
         </Element>
-        <div className="newContainer">
+        <div>
          <About/>
          </div>
          <div className="newContainer">
