@@ -434,3 +434,27 @@ h4 {
     font-size: 149%;
   }
 }
+@media (max-height: 670px) {
+  .sectionText {
+    margin-left: 5vh;
+    font-size: 89%;
+    width: unset;
+     margin-top: 2px;
+}
+.sectionRubrik {
+    margin-left: 5vh;
+    font-size: 150%;
+}
+  }
+@media (max-height: 490px) {
+  .sectionText {
+    margin-left: 5vh;
+    font-size: 75%;
+    width: unset;
+     margin-top: 2px;
+}
+.sectionRubrik {
+    margin-left: 5vh;
+    font-size: 140%;
+}
+  }

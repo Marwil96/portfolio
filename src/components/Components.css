@@ -272,7 +272,6 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     bottom:0;
-    z-index: 1000;
 }
 
 
@@ -469,6 +468,10 @@ body {
   -ms-transform:     scale(1.1);
   -o-transform:      scale(1.1);
 }
+
+/*.sliderContainer:hover .slideContainerColor {
+ box-shadow: 1px 1px;
+}*/
 .sliderContainer:hover .projectBoxRubrik {
   transform: scale(1.1); 
    -webkit-transform: scale(1.1);
@@ -796,6 +799,7 @@ display: none;
 
 
 }
+
 @media (max-width: 370px) {
 .aboutPageContainer {
   height: 134vh;

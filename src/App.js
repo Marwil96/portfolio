@@ -53,7 +53,7 @@ class App extends Component {
   whatLink(url) {
     if(url === window.location.origin+"/#/") {
               return (
-                <ScrollerLink name="projectPage" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</ScrollerLink>)
+                <ScrollerLink isDynamic={true} name="projectPage" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</ScrollerLink>)
             }
             else {
              return (<Link to="/" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</Link>)  
