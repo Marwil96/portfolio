@@ -34,10 +34,24 @@ var settings = {
       afterChange: () => dragging = false,
       responsive: [ { breakpoint: 768, settings: { slidesToShow: 1, centerMode:true, infinite: true, initialSlide: 0 } }, { breakpoint: 360, settings: { slidesToShow: 1,centerMode:true, infinite: true, initialSlide: 0 } }]
     };
+
 console.log("project")
+let classer = "sliderContainer projectx1";
 class ProjectPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      projectBox:"sliderContainer projectx1"
+
+    };
+  };
   showSettings (event) {
     event.preventDefault();
+  }
+  componentWillMount(){
+    setTimeout(() => {
+  this.setState({projectBox:"slideUp projectPageContainer"});
+}, 0)
   }
   toProjectPage() {
     <Link to="/somewhere"/>
@@ -46,7 +60,7 @@ class ProjectPage extends Component {
   sliderContainerCreator(data) {
     var i;
       return(
-         <div className="sliderContainer projectx1">
+         <div className="sliderContainer projectx1 slideUp">
               <Link to={data.link} style={{backgroundColor:data.backgroundColor}} className="slideContainerColor">
                 <h3 style={{color:data.color}} className="projectBoxMinorRubrik"> {data.subject} </h3>
                 <h1 style={{color:data.color}} className="projectBoxRubrik">{data.projectBoxRubrik}</h1>
@@ -64,7 +78,7 @@ class ProjectPage extends Component {
 
   render() {
     return (
-      <div className="projectPageContainer">
+      <div className={this.state.projectBox}>
           <h1 className="projectSubheaderText ">
           <span className="projectSubheader projectSubheaderColor2" onClick={this.toProjectPage}> Projects </span></h1>
 
