@@ -89,7 +89,7 @@ class App extends Component {
               </div>
             <h2 className="navigationProjectSubHeader" >Projects</h2>
             <Link to="/projectKnowel" className="navigationProject" onClick={this.navigationOff.bind(this)}>Knowel</Link>
-            <Link to="/projectThrive" className="navigationProject" onClick={this.navigationOff.bind(this)}>Thrive</Link>
+            <Link to="/projectAkademiskaHus" className="navigationProject" onClick={this.navigationOff.bind(this)}>Akademiska Hus</Link>
             <Link to="/projectCryptoTracker" className="navigationProject" onClick={this.navigationOff.bind(this)}>Cryptotracker</Link>
           </div>
           <div className="navigationButtons">
