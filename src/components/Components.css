@@ -772,7 +772,7 @@ a:hover {
 }
 .slideContainerColor {
       display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     max-width: 91%;
     align-items: center;
     flex-direction: column;
