@@ -10,6 +10,9 @@ body {
   display: flex;
   justify-content: flex-end;
   transition: all ease-in-out 0.35s;
+  -moz-transition: all ease-in-out 0.35s;
+  -o-transition: all ease-in-out 0.35s;
+  -webkit-transition: all ease-in-out 0.35s;
 }
 .introContainerFinished {
   height: 85%;
@@ -150,7 +153,7 @@ body {
     font-size: 25px;
     opacity: 0.78;
     width: 70vh;
-    margin-top: 10px;
+    margin-top: 4px;
     font-weight: 400;
 }
 .visualImageContainer {
@@ -297,7 +300,8 @@ body {
   }
   .sectionText {
     margin-left: 5vh;
-    font-size: 100%;
+    font-size: 93%;
+    margin-top: 0;
     width: unset;
   }
 }
@@ -474,7 +478,7 @@ h4 {
     margin-left: 5vh;
     font-size: 98%;
     width: unset;
-     margin-top: 2px;
+     margin-top: 0;
 }
 .sectionRubrik {
     margin-left: 5vh;
@@ -492,7 +496,7 @@ h4 {
     margin-left: 5vh;
     font-size: 92%;
     width: unset;
-     margin-top: 2px;
+     margin-top: 0;
 }
 .sectionRubrik {
     margin-left: 5vh;
@@ -522,7 +526,7 @@ h4 {
     margin-left: 5vh;
     font-size: 74%;
     width: unset;
-     margin-top: 2px;
+     margin-top: 0;
 }
 .sectionRubrik {
     margin-left: 5vh;
