@@ -6,9 +6,13 @@ body {
 }
 .introContainer {
   background-color: #5345E4;
-  height: 85%;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
+  transition: all ease-in-out 0.35s;
+}
+.introContainerFinished {
+  height: 85%;
 }
 .section {
   padding: 0;
@@ -17,6 +21,7 @@ body {
 
 .infoSubContainerContainer {
     display: flex;
+     align-self: flex-end;
   }
 .projectInfoContainer {
   display: flex;
@@ -28,19 +33,12 @@ body {
     flex-direction: column;
 }
 .projectInfoTextContainer {
-  height: 30%;
-    width: 35%;
+    /*height: 30%;*/
+    width: 50%;
     padding-right: 8%;
     padding-top: 30vh;
     position: relative;
-    -ms-flex-item-align: center;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    display: -ms-flexbox;
+    flex-direction: column;
     display: flex;
     color: #F7E0BC;
 }
@@ -60,7 +58,7 @@ body {
 }
 .projectInfoSubRubrik {
   text-align: right;
-  font-size: 36px;
+  font-size: 28px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   margin-top: -5px;
@@ -164,7 +162,7 @@ body {
   width: 100%;
   object-fit: cover;
 }
-.dot {
+/*.dot {
   width: 15px;
   text-align: center;
   height: 15px;
@@ -204,16 +202,50 @@ body {
   100% {
     opacity: 0;
   }
-}
-.animationContainer {
+}*/
+.dot {
+  background: #5345E4;
+  animation: fx 1300ms ease-in-out;
   position: absolute;
+  /*height: 100vh;*/
+  height: 100%;
+}
+
+@keyframes fx {
+  0% {
+    width: 0%;
+    left:0;
+  }
+  50% {
+    width: 100%;
+    left:0;
+  }
+  100% {
+    width: 100%;
+    /*left:100%;*/
+  }
+}
+/*@keyframes fx {
+  0% {
+    height: 0;
+    bottom:0;
+  }
+  50% {
+    height: 100vh;
+    top:0;
+  }
+  100% {
+    height: 80vh;
+  }
+}*/
+.animationContainer {
+  position: fixed;
   height: 100%;
   width: 100%;
- display: flex;
- background: #F5F5F5;
+ background: #f5f5f5;
  z-index: 10000;
+ display: flex;
  justify-content: center;
- align-items: center;
 }
 @media (max-width: 780px) {
   .projectInfoTextContainer {
@@ -228,11 +260,13 @@ body {
 }
   .projectInfoRubrik {
       text-align: center;
-      font-size: 260%;
+      font-size: 240%;
   }
   .projectInfoSubRubrik {
     text-align: center;
-    font-size: 160%;
+    font-size: 140%;
+    width: 95%;
+    align-self: center;
   }
   .infoSubContainerContainer {
     width: 100%;
@@ -263,7 +297,7 @@ body {
   }
   .sectionText {
     margin-left: 5vh;
-    font-size: 110%;
+    font-size: 100%;
     width: unset;
   }
 }
@@ -438,31 +472,43 @@ h4 {
 @media (max-height: 670px) {
   .sectionText {
     margin-left: 5vh;
-    font-size: 102%;
-    width: unset;
-     margin-top: 2px;
-}
-.sectionRubrik {
-    margin-left: 5vh;
-    font-size: 150%;
-}
-  }
-  @media (max-height: 650px) {
-  .sectionText {
-    margin-left: 5vh;
     font-size: 98%;
     width: unset;
      margin-top: 2px;
 }
 .sectionRubrik {
     margin-left: 5vh;
+    font-size: 140%;
+}
+ .projectInfoSubRubrik {
+    text-align: center;
+    font-size: 130%;
+    width: 95%;
+    align-self: center;
+  }
+  }
+  @media (max-height: 650px) {
+  .sectionText {
+    margin-left: 5vh;
+    font-size: 92%;
+    width: unset;
+     margin-top: 2px;
+}
+.sectionRubrik {
+    margin-left: 5vh;
     font-size: 150%;
 }
+ .projectInfoSubRubrik {
+    text-align: center;
+    font-size: 130%;
+    width: 95%;
+    align-self: center;
+  }
   }
   @media (max-height: 570px) {
   .sectionText {
     margin-left: 5vh;
-    font-size: 86%;
+    font-size: 79%;
     width: unset;
      margin-top: 2px;
 }
@@ -474,7 +520,7 @@ h4 {
 @media (max-height: 490px) {
   .sectionText {
     margin-left: 5vh;
-    font-size: 75%;
+    font-size: 74%;
     width: unset;
      margin-top: 2px;
 }

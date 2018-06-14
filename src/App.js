@@ -19,6 +19,8 @@ import ProjectStarvation from './components/projects/ProjectStarvation';
 import ProjectReporter from './components/projects/ProjectReporter';
 import ProjectThrive from './components/projects/ProjectThrive';
 import ProjectKnowel from './components/projects/projectKnowel';
+import ProjectCryptoTracker from './components/projects/projectCryptoTracker';
+import ProjectAkademiskaHus from './components/projects/projectAkademiskaHus';
 
 
 ReactGA.initialize('UA-37970043-2'); //Unique Google Analytics tracking number
@@ -42,7 +44,7 @@ class App extends Component {
     };
   };
   componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 1000);
+    setTimeout(() => this.setState({ loading: false }), 1300);
   }
   navigationOn() {
     this.setState({nav:"navigation navigationActive", app:"App dark"})
@@ -63,9 +65,11 @@ class App extends Component {
     console.log(loading)
     if(loading === true) {
       console.log("Loading")
-      return(<div className="animationContainer"> <div className="dot"></div>
+      return(
+          <div className="animationContainer"> 
             <div className="dot"></div>
-            <div className="dot"></div></div>);
+            <h1 style={{color: "#F5F5F5", fontSize:"20vw", zIndex:"1000000", alignSelf:"center",fontFamily: 'Poppins', fontWeight:1000}}> Loading </h1>
+            </div>);
     }
     return (
        <div className="App">
@@ -86,7 +90,7 @@ class App extends Component {
             <h2 className="navigationProjectSubHeader" >Projects</h2>
             <Link to="/projectKnowel" className="navigationProject" onClick={this.navigationOff.bind(this)}>Knowel</Link>
             <Link to="/projectThrive" className="navigationProject" onClick={this.navigationOff.bind(this)}>Thrive</Link>
-            <Link to="/projectStarvation" className="navigationProject" onClick={this.navigationOff.bind(this)}>Concept</Link>
+            <Link to="/projectCryptoTracker" className="navigationProject" onClick={this.navigationOff.bind(this)}>Cryptotracker</Link>
           </div>
           <div className="navigationButtons">
             <Link to="/#Home" className="navigationClose" onClick={this.navigationOff.bind(this)}>Home</Link>
@@ -128,6 +132,8 @@ const Main = () => (
       <Route path="/projectThrive" component={ProjectThrive}/>
       <Route path="/projectKnowel" component={ProjectKnowel}/>
       <Route path="/projectStarvation" component={ProjectStarvation}/>
+      <Route path="/projectCryptoTracker" component={ProjectCryptoTracker}/>
+      <Route path="/projectAkademiskaHus" component={ProjectAkademiskaHus}/>
     </Switch>
 )
 

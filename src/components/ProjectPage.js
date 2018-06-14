@@ -3,14 +3,16 @@ import './Components.css';
 import {
   Link
 } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 import firstImage from '../img/KnowelMacbookMockup.png';
 import * as Scroll from 'react-scroll';
 import secondImage from '../img/ThriveMobilMockup.png';
 import thirdImage from '../img/KnowelMacbookMockup.png';
+import icon  from '../img/Icon.png';
 var data = [
-  {projectBoxRubrik:"Knowel", projectBoxText:"A completely new identity & website",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectKnowel#1", subject:"Developer & Design", id:"dator"},
-  {projectBoxRubrik:"Thrive", projectBoxText:"Make a campain site", color:"#AEF2F0", backgroundColor:"#263776", image:secondImage, link:"/projectThrive", subject:"Design", id:"mobil"},
-  {projectBoxRubrik:"Concept Site", projectBoxText:"How to use flinto", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectStarvation", subject:"Design", id:"dator"},
+  {projectBoxRubrik:"Knowel", projectBoxText:"A completely new identity & website",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectKnowel#1", subject:"Development & Design", id:"dator"},
+  {projectBoxRubrik:"Akademiska Hus", projectBoxText:"A mobile interface that assists  throughout the day.", color:"#AEF2F0", backgroundColor:"#263776", image:secondImage, link:"/projectAkademiskaHus", subject:"Design", id:"mobil"},
+  {projectBoxRubrik:"Cryptotracker", projectBoxText:"A app that tracks the cryptocurrencys you are interested in. ", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectCryptoTracker", subject:"Development & Design", id:"dator"},
 ]
 let dragging = false;
 const location = {
@@ -79,6 +81,11 @@ class ProjectPage extends Component {
   render() {
     return (
       <div className={this.state.projectBox}>
+            <Helmet>
+              <title>William Martinsson - Digital Designer</title>
+              <link rel="shortcut icon" href={icon} type="image/png"/>
+              <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          </Helmet>
           <h1 className="projectSubheaderText ">
           <span className="projectSubheader projectSubheaderColor2" onClick={this.toProjectPage}> Projects </span></h1>
 

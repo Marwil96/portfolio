@@ -59,6 +59,7 @@ class projectKnowel extends Component {
     super(props);
     this.state= {
       loading: true,
+      introContainerClass:"introContainer"
     };
   }
 
@@ -68,7 +69,7 @@ class projectKnowel extends Component {
 
 
   componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 1000);
+    setTimeout(() => this.setState({ loading: false }), 1300);
   }
 
   renderInformation(data) {
@@ -119,16 +120,18 @@ class projectKnowel extends Component {
     console.log(loading)
     console.log(data[1], 'pageRender');
     if(loading === true) {
+      setTimeout(() => this.setState({ introContainerClass: "introContainerFinished introContainer" }), 1400);
       console.log("Loading")
       return(
-        <div className="animationContainer"> <div className="dot"></div>
+          <div className="animationContainer"> 
             <div className="dot"></div>
-            <div className="dot"></div></div>);
+            <h1 style={{color: "#F5F5F5", fontSize:"20vw", zIndex:"1000000", alignSelf:"center",fontFamily: 'Poppins', fontWeight:1000}}> Loading </h1>
+            </div>);
     }
     return (
       <SectionsContainer {...options}>
       <Section >
-       <div className="introContainer">
+       <div className={this.state.introContainerClass}>
           <div className="projectInfoTextContainer">
             <h1 className="projectInfoRubrik"> Knowel </h1>
             <h2 className="projectInfoSubRubrik"> A completely new identity<br/> and website.</h2>

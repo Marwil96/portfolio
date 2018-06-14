@@ -31,16 +31,17 @@ class ProjectThrive extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 1000);
+    setTimeout(() => this.setState({ loading: false }), 1300);
   }
   pageRender(loading) {
     console.log(loading)
     if(loading === true) {
       console.log("Loading")
-      return(<div className="animationContainer"> <div className="dot"></div>
+      return(
+          <div className="animationContainer"> 
             <div className="dot"></div>
-            <div className="dot"></div></div>)
-  ;
+            <h1 style={{color: "#F5F5F5", fontSize:"20vw", zIndex:"1000000", alignSelf:"center",fontFamily: 'Poppins', fontWeight:1000}}> Loading </h1>
+            </div>);
     }
     return (
       <Element className="infoContainer">
@@ -61,7 +62,7 @@ class ProjectThrive extends Component {
       <div className="thriveTextContainer">
           <h1 className="infoInfoRubrik"> Thrive </h1>
           <h2 className="infoSubRubrik"> 
-          A campaign site for a small ecological, vegan, Fairtrade marked store. 
+          A campain site for a small ecological, vegan, Fairtrade marked store. 
 </h2>
           <div className="subContainer"><h3 className="noMargin">visit</h3> <a href="https://github.com/cjcmattsson/THRIVEFinal"><h4>GitHub</h4></a></div>
           <div className="subContainer"><h3 className="noMargin">status</h3><h4>Done</h4></div>
