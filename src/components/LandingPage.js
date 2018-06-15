@@ -12,19 +12,24 @@ class LandingPage extends Component {
     super(props);
     this.state= {
       nav: "navigation",
-      app: "App"
+      app: "App",
+      rubrikContainerAnimation: "rubrikContainer"
 
     };
   };
   changeBackgroundColor() {
     this.setState({ app: "b" })
   }
+  componentDidMount() {
+    this.setState({ loading: false })
+    this.setState({ rubrikContainerAnimation: "rubrikContainer rubrikContainerAnimated" })
+  }
   pageRender() {
     return(
       <div> 
         <Element name="landingPage" className="landingPageContainer newContainer">
         <h1 style={{position:"absolute", color:"#5245e5", fontSize: "14px", left:"10%",top:"4%", width:"40%", fontFamily: 'Roboto Mono', fontWeight: 400}}> William Martinsson - Digital Designer </h1>
-          <div className="rubrikContainer"> 
+          <div className={this.state.rubrikContainerAnimation}> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
             <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
             <span className='lowOpacity'>based in Gothenburg</span></span> </h1>

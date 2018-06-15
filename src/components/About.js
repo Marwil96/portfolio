@@ -7,7 +7,7 @@ import {Section} from 'react-fullpage';
 class About extends Component {
   render() {
     return (
-        <div className="aboutContainer">
+        <div className="aboutContainer" id="aboutContainer">
           <div className="aboutTextContainer"> 
             <h1 className="h1TextStyle"> About </h1>
             <p className="pTextStyle"> I’m William Martinsson, a 21 years old Digital Designer who knows how to code from Gothenburg, Sweden. I’m currently studying digital design at YRGO. <br/><br/>

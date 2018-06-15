@@ -79,22 +79,27 @@ body {
   align-items: center;
   align-self: flex-end;
   left: 15%;
-  margin-top:15px;
   position: absolute;
+  height: 112px;
+  justify-content: flex-start
 }
 .readMoreText {
-  color:#F5F5F5;
+  color:#F7E0BC;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  margin-top: -5vh;
+  margin:0;
+  margin-bottom: 10px;
 }
 .readMoreLine {
-  width: 12px;
-  height: 60px;
-  background-color: #F5F5F5;
-  border-radius: 11px;
+  width: 2px;
+  height: 75px;
+  background-color: #F7E0BC;
+  transition: all 1s cubic-bezier(.23,1,.32,1);
+}
+.readMoreContainer:hover .readMoreLine {
+  height: 0;
 }
 .backArrow {
   transition: all 0.2 ease;

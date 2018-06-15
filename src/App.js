@@ -41,24 +41,37 @@ class App extends Component {
       loading: true,
       nav: "navigation",
       app: "App",
+      navLink1:"navigationProject",
+      navLink2:"navigationProject",
+      navLink3:"navigationProject",
+      navMenu1:"navigationClose",
+      navMenu2:"navigationClose",
+      navMenu3:"navigationClose",
+
     };
   };
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 1300);
   }
   navigationOn() {
-    this.setState({nav:"navigation navigationActive", app:"App dark"})
+    setTimeout(() => {
+      this.setState({navLink2:"navigationProject navOpacity", navMenu2:"navigationClose navOpacity" });
+    }, 250);
+    setTimeout(() => {
+      this.setState({navLink3:"navigationProject navOpacity", navMenu3:"navigationClose navOpacity" });
+    }, 500);
+    this.setState({nav:"navigation navigationActive", app:"App dark", navLink1:"navigationProject navOpacity", navMenu1:"navigationClose navOpacity" })
   }
   navigationOff() {
-    this.setState({nav:"navigation", app:"App"})
+    this.setState({nav:"navigation", app:"App", navLink1:"navigationProject", navLink2:"navigationProject", navLink3:"navigationProject", navMenu1:"navigationClose", navMenu2:"navigationClose", navMenu3:"navigationClose"  })
   }
   whatLink(url) {
     if(url === window.location.origin+"/#/") {
               return (
-                <ScrollerLink isDynamic={true} name="projectPage" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</ScrollerLink>)
+                <ScrollerLink isDynamic={true} name="projectPage" className={this.state.navMenu2} onClick={this.navigationOff.bind(this)}>About</ScrollerLink>)
             }
             else {
-             return (<Link to="/" className="navigationClose" onClick={this.navigationOff.bind(this)}>About</Link>)  
+             return (<Link to="/" className={this.state.navMenu2} onClick={this.navigationOff.bind(this)}>About</Link>)  
             }
   }
   pageRender(loading, url) {
@@ -88,14 +101,14 @@ class App extends Component {
               <span style={{background:"white", transform: "rotate(-45deg) translate(0, -4px)"}}></span>
               </div>
             <h2 className="navigationProjectSubHeader" >Projects</h2>
-            <Link to="/projectKnowel" className="navigationProject" onClick={this.navigationOff.bind(this)}>Knowel</Link>
-            <Link to="/projectAkademiskaHus" className="navigationProject" onClick={this.navigationOff.bind(this)}>Akademiska Hus</Link>
-            <Link to="/projectCryptoTracker" className="navigationProject" onClick={this.navigationOff.bind(this)}>Cryptotracker</Link>
+            <Link to="/projectKnowel" className={this.state.navLink1} onClick={this.navigationOff.bind(this)}>Knowel</Link>
+            <Link to="/projectAkademiskaHus" className={this.state.navLink2} onClick={this.navigationOff.bind(this)}>Akademiska Hus</Link>
+            <Link to="/projectCryptoTracker" className={this.state.navLink3} onClick={this.navigationOff.bind(this)}>Cryptotracker</Link>
           </div>
           <div className="navigationButtons">
-            <Link to="/#Home" className="navigationClose" onClick={this.navigationOff.bind(this)}>Home</Link>
-            {this.whatLink(url)}
-            <a href="https://williammartinsson.typeform.com/to/grsvRk" className="navigationClose" onClick={this.navigationOff.bind(this)}>Contact</a>
+            <Link to="/#Home" className={this.state.navMenu1} onClick={this.navigationOff.bind(this)}>Home</Link>
+            <Link to="/" className={this.state.navMenu2} onClick={this.navigationOff.bind(this)}>About</Link>
+            <a href="https://williammartinsson.typeform.com/to/grsvRk" className={this.state.navMenu3} onClick={this.navigationOff.bind(this)}>Contact</a>
           </div>
         </div>
     <Main />
