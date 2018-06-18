@@ -131,7 +131,7 @@ body {
 {
   display: block;
   position: absolute;
-  top: 50px;
+  top: 8vh;
   right: 50px;
   
   z-index: 1;
@@ -240,6 +240,9 @@ body {
   display: flex;
   flex-direction: column;
   transition: all 0.95s cubic-bezier(0.42, 0, 0.08, 1.1);
+  -moz-transition: all 0.95s cubic-bezier(0.42, 0, 0.08, 1.1);
+  -o-transition: all 0.95s cubic-bezier(0.42, 0, 0.08, 1.1);
+  -webkit-transition: all 0.95s cubic-bezier(0.42, 0, 0.08, 1.1);
   transform: translateY(80px);
 }
 .rubrikContainerAnimated {
@@ -263,6 +266,29 @@ body {
 }
 .lowOpacity {
   opacity: 0.76;
+}
+/*.locationRubrik{
+  transition: all 1s ease-in-out;
+    cursor: cell;
+}
+.locationRubrik:active {
+  color:yellow;
+  animation: yellowBlue 1s infinite;
+  transition: all 1s ease-in-out;
+  font-size: 80px;
+  font-weight: 1000;
+}*/
+
+@keyframes yellowBlue {
+  0% {
+    color: #ffc100;
+  }
+  50% {
+    color: #005b99;
+  }
+  75% {
+   color: #ffc100;
+  }
 }
 .rubrikText {
   font-size: 54px;
@@ -400,6 +426,28 @@ body {
   margin-top: -150px;
   /*margin-top: -20vh;*/
 }
+.moreProjectsButton{
+    align-self: center;
+    font-size: 36px;
+    font-family: poppins;
+    color: white;
+    background: #5245e5;
+    padding: 20px;
+    margin-top: 64px;
+    border-radius: 9px;
+    cursor: pointer;
+    box-shadow: 4px 4px #fdd8bb;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.moreProjectsButton:hover {
+  background: #473bc5;
+  box-shadow: 0px 0px #fdd8bb;
+}
+.displayNone {
+  display: none;
+}
 
 .projectRubrik {
   text-align: center;
@@ -441,6 +489,13 @@ body {
     -moz-transition: all 1s cubic-bezier(.23,1,.32,1);
     -o-transition: all 1s cubic-bezier(.23,1,.32,1);
     -webkit-transition: all 1s cubic-bezier(.23,1,.32,1);
+}
+.newSliderContainer {
+  margin-top: 200px;
+  opacity: 0;
+}
+.afterProjectRender {
+  margin-top: 0px;
 }
 .slideContainerColor {
       width: 766px;
@@ -707,6 +762,7 @@ a:hover {
   font-size: 110px;
   font-size: 500%;
   margin-top: 38%;
+  line-height: 1.2;
 }
 .navigationClose {
   width: 100%;
@@ -777,6 +833,23 @@ a:hover {
   width: 80%;
   margin-bottom: 13%;
 }
+.moreProjectsButton {
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 22px;
+    font-family: poppins;
+    color: white;
+    background: #5245e5;
+    padding: 20px;
+    margin-top: 32px;
+    border-radius: 9px;
+    cursor: pointer;
+    -webkit-box-shadow: 4px 4px #fdd8bb;
+    box-shadow: 4px 4px #fdd8bb;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 .sliderContainer:hover .slideContainerColor {
   transform: none; 
 }
@@ -837,8 +910,11 @@ a:hover {
 
 
 }
-
 @media (max-width: 370px) {
+  .largeContactMeButton {
+    font-size: 450%;
+    line-height: 1.2;
+}
 .aboutPageContainer {
   height: 134vh;
   flex:none;
@@ -871,6 +947,17 @@ a:hover {
 .infoWindow {
     margin-top: 11%;
   }
+}
+@media (max-width: 330px) {
+  .projectBoxRubrik {
+  font-size: 145%;
+}
+.moreProjectsButton {
+    font-size: 18px;
+    }
+    .largeContactMeButton {
+    font-size: 421%;
+}
 }
 
 

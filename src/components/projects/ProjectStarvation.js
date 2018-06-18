@@ -68,12 +68,6 @@ phases of starvation</h2>
           <h2 className="secondImgText">Last page is white to create a greater contrast.</h2>
         </div>
         <div class="whiteImgBackground"> <img className="projectImage"src={secondImage} /> </div>
-        <Link to="/projectPortfolio">
-            <img className="rightArrow" src={arrowImage}/>
-      </Link>
-      <Link to="/projectInfographic">
-            <img className="leftArrow" src={arrowImage}/>
-      </Link>
       </Element>
       )
   }

@@ -118,13 +118,7 @@ class ProjectThrive extends Component {
 </h2>
         </div>
         <div class="greyImgBackground"> <img className="projectImage"src={seventhImage} /> </div>
-        <Link to="/projectInfographic">
-            <img className="rightArrow" src={arrowImage}/>
-      </Link>
-      <Link to="/projectPortfolio">
-            <img className="leftArrow" src={arrowImage}/>
-      </Link>
-      </Element>
+          </Element>
       )
   }
   render() {

@@ -14,6 +14,10 @@ var data = [
   {projectBoxRubrik:"Akademiska Hus", projectBoxText:"A mobile interface that assists  throughout the day.", color:"#AEF2F0", backgroundColor:"#263776", image:secondImage, link:"/projectAkademiskaHus", subject:"Design", id:"mobil"},
   {projectBoxRubrik:"Cryptotracker", projectBoxText:"A app that tracks the cryptocurrencys you are interested in.", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectCryptoTracker", subject:"Development & Design", id:"dator"},
 ]
+var showMoreProjectsData = [
+  {projectBoxRubrik:"Starvation Concept", projectBoxText:"Learning flinto animation",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectStarvation", subject:"Design", id:"dator"},
+  {projectBoxRubrik:"Thrive", projectBoxText:"A campaign site for a ecological fashion store",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectThrive", subject:"Design", id:"dator"}
+]
 let dragging = false;
 const location = {
   pathname: '/somewhere',
@@ -43,9 +47,13 @@ class ProjectPage extends Component {
   constructor(props) {
     super(props);
     this.state= {
-      projectBox:"sliderContainer projectx1"
+      projectBox:"sliderContainer projectx1",
+      showMoreProject: false,
+      newProjectContainer: "sliderContainer newSliderContainer",
+      moreProjectsButtonClass: "moreProjectsButton"
 
     };
+     this.moreProjectsRender = this.moreProjectsRender.bind(this);
   };
   showSettings (event) {
     event.preventDefault();
@@ -58,6 +66,13 @@ class ProjectPage extends Component {
   toProjectPage() {
     <Link to="/somewhere"/>
     console.log("toProjectPage")
+  }
+  moreProjectsRender() {
+    console.log("moreProjectsRender")
+    this.setState({showMoreProject: true})
+    setTimeout(() => {
+      this.setState({newProjectContainer:"sliderContainer", moreProjectsButtonClass:"moreProjectsButton displayNone"});
+    }, 100);
   }
   sliderContainerCreator(data) {
     var i;
@@ -76,7 +91,22 @@ class ProjectPage extends Component {
       
         )
     }
-  
+  moreProjectsLoop(showMoreProjectsData) {
+    var i;
+    return (
+    <div className={this.state.newProjectContainer}>
+              <Link to={showMoreProjectsData.link} style={{backgroundColor:showMoreProjectsData.backgroundColor}} className="slideContainerColor">
+                <h3 style={{color:showMoreProjectsData.color}} className="projectBoxMinorRubrik"> {showMoreProjectsData.subject} </h3>
+                <h1 style={{color:showMoreProjectsData.color}} className="projectBoxRubrik">{showMoreProjectsData.projectBoxRubrik}</h1>
+                <h2 style={{color:showMoreProjectsData.color}} className="projectBoxUnderRubrik">Show my self</h2>
+                <h3 style={{color:showMoreProjectsData.color}} className="projectBoxText">{showMoreProjectsData.projectBoxText}</h3>
+              </Link>
+              <img className="projectPageImage" id={showMoreProjectsData.id} src={showMoreProjectsData.image}/>
+              <div className="compMockup">
+               </div>
+            </div>
+            )
+  }
 
   render() {
     return (
@@ -91,7 +121,11 @@ class ProjectPage extends Component {
 
          
             {data.map(data => (this.sliderContainerCreator(data)))}
-          
+          <h1 className={this.state.moreProjectsButtonClass} onClick={this.moreProjectsRender}> Want to se more projects? </h1>
+          {this.state.showMoreProject ?
+          showMoreProjectsData.map(showMoreProjectsData => (this.moreProjectsLoop(showMoreProjectsData))) :
+           null
+        }
         </div>
     );
   }

@@ -32,7 +32,7 @@ class LandingPage extends Component {
           <div className={this.state.rubrikContainerAnimation}> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
             <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
-            <span className='lowOpacity'>based in Gothenburg</span></span> </h1>
+            <span className='lowOpacity'>based in <span class="locationRubrik">Gothenburg</span></span></span> </h1>
           </div>
           <Link to="projectPage" activeClass="active" spy={true} smooth={true} offset={50} duration={500} className="arrowContainer">
             <img style={{heigth:"50px"}} className="downArrow bounce" src={arrowImage} alt="down arrow"/>
