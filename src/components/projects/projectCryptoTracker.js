@@ -39,7 +39,8 @@ class projectCryptoTracker extends Component {
     super(props);
     this.state= {
       loading: true,
-      introContainerClass:"introContainer"
+      introContainerClass:"introContainer",
+      projectInfoAnimated: "projectInfoTextContainer"
     };
   }
 
@@ -98,7 +99,7 @@ class projectCryptoTracker extends Component {
   }
   pageRender(loading) {
     if(loading === true) {
-      setTimeout(() => this.setState({ introContainerClass: "introContainerFinished introContainer" }), 1400);
+      setTimeout(() => this.setState({ introContainerClass: "introContainerFinished introContainer", projectInfoAnimated: "projectInfoTextContainer projectInfoTextContainerAnimated" }), 1400);
       console.log("Loading")
       return(
           <div className="animationContainer"> 
@@ -110,7 +111,7 @@ class projectCryptoTracker extends Component {
       <SectionsContainer {...options}>
       <Section >
        <div className={this.state.introContainerClass}>
-          <div className="projectInfoTextContainer">
+          <div className={this.state.projectInfoAnimated}>
             <h1 className="projectInfoRubrik"> Cryptotracker </h1>
             <h2 className="projectInfoSubRubrik"> A React Native app that tracks the Cryptocurrencys you are interested in. </h2>
             <div className="infoSubContainerContainer">

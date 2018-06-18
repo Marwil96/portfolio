@@ -44,7 +44,14 @@ body {
     flex-direction: column;
     display: flex;
     color: #F7E0BC;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
 }
+.projectInfoTextContainerAnimated {
+    transform: translateY(0);
+    opacity: 1;
+  }
 .infoSubContainer {
   display: flex;
     align-items: center;

@@ -121,7 +121,7 @@ class ProjectPage extends Component {
 
          
             {data.map(data => (this.sliderContainerCreator(data)))}
-          <h1 className={this.state.moreProjectsButtonClass} onClick={this.moreProjectsRender}> Want to se more projects? </h1>
+          <h1 className={this.state.moreProjectsButtonClass} onClick={this.moreProjectsRender}> Want to see more projects? </h1>
           {this.state.showMoreProject ?
           showMoreProjectsData.map(showMoreProjectsData => (this.moreProjectsLoop(showMoreProjectsData))) :
            null

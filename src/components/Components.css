@@ -244,9 +244,11 @@ body {
   -o-transition: all 0.95s cubic-bezier(0.42, 0, 0.08, 1.1);
   -webkit-transition: all 0.95s cubic-bezier(0.42, 0, 0.08, 1.1);
   transform: translateY(80px);
+  opacity: 0;
 }
 .rubrikContainerAnimated {
   transform: translateY(0);
+  opacity: 1;
 }
 .bigHello {
   font-size: 65px;
