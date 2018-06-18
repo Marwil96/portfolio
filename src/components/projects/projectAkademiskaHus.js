@@ -60,7 +60,8 @@ class projectAkademiskaHus extends Component {
     super(props);
     this.state= {
       loading: true,
-      introContainerClass:"introContainer"
+      introContainerClass:"introContainer",
+      projectInfoAnimated: "projectInfoTextContainer"
     };
   }
 
@@ -121,7 +122,7 @@ class projectAkademiskaHus extends Component {
     console.log(loading)
     console.log(data[1], 'pageRender');
     if(loading === true) {
-      setTimeout(() => this.setState({ introContainerClass: "introContainerFinished introContainer" }), 1400);
+      setTimeout(() => this.setState({ introContainerClass: "introContainerFinished introContainer", projectInfoAnimated: "projectInfoTextContainer projectInfoTextContainerAnimated" }), 1400);
       console.log("Loading")
       return(
           <div className="animationContainer"> 
@@ -133,7 +134,7 @@ class projectAkademiskaHus extends Component {
       <SectionsContainer {...options}>
       <Section >
        <div className={this.state.introContainerClass}>
-          <div className="projectInfoTextContainer">
+          <div className={this.state.projectInfoAnimated}>
             <h1 className="projectInfoRubrik"> Akademiska Hus </h1>
             <h2 className="projectInfoSubRubrik"> A mobile interface that assists Akademiska hus workforce throughout their day.</h2>
             <div className="infoSubContainerContainer">
