@@ -869,6 +869,10 @@ a:hover {
    height: 39vh;
    margin-top: 5%!important;
 }
+.newSliderContainer {
+  margin-top: 200px!important;
+  opacity: 0;
+}
 .projectPageContainer {
   margin-bottom: 0;
 }
