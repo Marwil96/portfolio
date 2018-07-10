@@ -4,9 +4,67 @@ body {
   padding:0;
   background-color: #F5F5F5;
 }
+/*New Design*/
+
+.projectSection {
+  min-height: 100vh;
+  width: 100%;
+}
+.projectContentSection {
+  margin-top:20vh;
+  min-height:100vh;
+  width:100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+.projectContentContainer {
+  width:80%;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-around;
+  display:flex;
+  margin-bottom: 6vh;
+}
+.projectContentSubHeader {
+    font-size: 28px;
+    opacity:0.86;
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+    text-align: right;
+}
+.projectContentText {
+  font-size: 16px;
+  opacity:0.71;
+  font-weight: 300;
+  width:53%;
+  margin:0;
+}
+.projectContentImage {
+  max-width: 27%;
+  align-self: flex-start;
+  object-fit: cover;
+}
+.projectContentFullHeightImage {
+  height: 90vh;
+    -ms-flex-item-align: start;
+    align-self: center;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom:4vh;
+}
+.projectContentPrototype {
+    transform: scale(0.6);
+    margin-top: -206px;
+}
+
+/*Old Design*/
+
 .introContainer {
   background-color: #5345E4;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: flex-end;
   transition: all ease-in-out 0.35s;
@@ -15,7 +73,7 @@ body {
   -webkit-transition: all ease-in-out 0.35s;
 }
 .introContainerFinished {
-  height: 85%;
+  height: 85vh;
 }
 .section {
   padding: 0;
@@ -458,7 +516,52 @@ h4 {
     opacity: 0.75;
     margin:0;
 }
+
 @media (max-width: 780px) {
+  /*New Design */
+.projectContentContainer {
+  width:88%;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-around;
+  display:flex;
+  margin-bottom: 6vh;
+  flex-direction:column;
+  align-items:center;
+}
+.projectContentSubHeader {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.projectContentText {
+  font-size: 16px;
+  font-weight: 300;
+  width:100%!important;
+  text-align:left;
+  margin:0;
+}
+.projectContentImage {
+  height: unset;
+  max-width:90%;
+  align-self: center;
+  object-fit: cover;
+  margin-top: 32px;
+}
+.projectContentPrototype {
+    margin-top: -170px;
+}
+.projectContentFullHeightImage {
+      height: 63vh;
+    -ms-flex-item-align: start;
+    align-self: center;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+  /*Old Design*/
   .thriveTextContainer {
     width: 70%;
   }

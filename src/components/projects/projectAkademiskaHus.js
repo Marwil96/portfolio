@@ -4,7 +4,7 @@ import 'loaders.css/src/animations/ball-pulse.scss';
 import {
   Link
 } from 'react-router-dom';
-import {ScrollToTopOnMount ,SectionsContainer, Section} from 'react-fullpage';
+import { Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { Player } from 'video-react';
 import arrowImage from '../download.svg';
 import firstVideo from '../../img/Reporter/ReporterVideo.mov'
@@ -15,11 +15,11 @@ import fourthImage from '../../img/Reporter/ReporterWebbCity.png';
 import visualImage1 from '../../img/AkademiskaHus/OurMission.png';
 import visualImage2 from '../../img/AkademiskaHus/ForWho.png';
 import visualImage3 from '../../img/AkademiskaHus/Users.png';
-import visualImage4 from '../../img/AkademiskaHus/Research.png';
-import visualImage5 from '../../img/AkademiskaHus/Problem.png';
-import visualImage6 from '../../img/AkademiskaHus/Solution.png';
+import visualImage4 from '../../img/AkademiskaHus/UsersBigDown.png';
+import visualImage5 from '../../img/AkademiskaHus/WireframeSideWays.png';
+import visualImage6 from '../../img/AkademiskaHus/Margins.png';
 import visualImage7 from '../../img/AkademiskaHus/AkademiskaHusPrototyp.gif';
-import visualImage8 from '../../img/Knowel/dynamic.png';
+import visualImage8 from '../../img/AkademiskaHus/Introduction.png';
 import visualImage9 from '../../img/Knowel/cms.png';
 import visualImage10 from '../../img/Knowel/time.png';
 import visualImage11 from '../../img/Knowel/future.png';
@@ -27,33 +27,22 @@ import visualImage11 from '../../img/Knowel/future.png';
 
 
 
-let options = {
-      sectionClassName:     'section',
-      anchors:              ['/projectAkademiskaHus/#1', '/projectAkademiskaHus/#2', '/projectAkademiskaHus/#3','/projectAkademiskaHus/#4','/projectAkademiskaHus/#5','/projectAkademiskaHus/#6','/projectAkademiskaHus/#7','/projectAkademiskaHus/#8'],
-      scrollBar:            false,
-      navigation:           false,
-      lockAnchors: false,
-      verticalAlign:        false,
-      arrowNavigation:      true,
-      sectionPaddingTop:    '0', // the section top padding 
-      sectionPaddingBottom: '0', // the section bottom padding 
-    };
 
-var data = [
-  {sectionRubrik:"Our Mission", sectionText:"Jag och Karl-Anton fick uppdraget att skapa en helt ny grafisk identitet och hemsida till non-profit föreningen Knowel som jobbar med att sprida en entreprenörs värdegrund.", visualImage:visualImage1},
-  {sectionRubrik:"Our mission", sectionText:"I and Sarah Bengtsson were assigned the mission to inspire Akademiska Hus  on how they could build a mobile interface for their customers.", visualImage:visualImage1},
-  {sectionRubrik:"For who", sectionText:"Akademiska hus is a state owned property owner, who mostly owns property’s located on different university campuses. In size, it is Sweden's second largest property owner.", visualImage:visualImage2},
-  {sectionRubrik:"Users", sectionText:"We discussed about which users we would prioritize to target this new service to and who would need it. We found that we would primarily need to solve the communication between Akademiska hus – Customer/Tenants – Users/the people who use academic house properties.", visualImage:visualImage3},
-  {sectionRubrik:"Research", sectionText:"We started our entire process by doing market research to investigate if there were any other similar solutions on the market today. We also discussed about Akademiska hus current service and who used it and what the actual problem were.", visualImage:visualImage4},
-  {sectionRubrik:"Problem", sectionText:"During our interviews we noticed that it is hard for Akademiska hus customers service staff to report property faults. Which lower the value of the service that Akademiska hus provides (Property’s for campuses) for both the customer and the customers customer (students, teachers etc.).", visualImage:visualImage5},
-  {sectionRubrik:"Solution", sectionText:"To make it easier to report faults, we came up with a web app which you can use as a tool to report faults on the go. After careful considerations we selected these five functions to be developed.", visualImage:visualImage6},
-  {sectionRubrik:"End result", sectionText:"We created a tool that will make the fault reporting possible wherever you are, it will be easier and a lot faster then the current solution. Because of that, the communication between Akademiska hus and their customers will be improved, and the customers will have a better experience then before.", visualImage:visualImage7},
+// var data = [
+//   {sectionRubrik:"Our Mission", sectionText:"Jag och Karl-Anton fick uppdraget att skapa en helt ny grafisk identitet och hemsida till non-profit föreningen Knowel som jobbar med att sprida en entreprenörs värdegrund.", visualImage:visualImage1},
+//   {sectionRubrik:"Our mission", sectionText:"I and Sarah Bengtsson were assigned the mission to inspire Akademiska Hus  on how they could build a mobile interface for their customers.", visualImage:visualImage1},
+//   {sectionRubrik:"For who", sectionText:"Akademiska hus is a state owned property owner, who mostly owns property’s located on different university campuses. In size, it is Sweden's second largest property owner.", visualImage:visualImage2},
+//   {sectionRubrik:"Users", sectionText:"We discussed about which users we would prioritize to target this new service to and who would need it. We found that we would primarily need to solve the communication between Akademiska hus – Customer/Tenants – Users/the people who use academic house properties.", visualImage:visualImage3},
+//   {sectionRubrik:"Research", sectionText:"We started our entire process by doing market research to investigate if there were any other similar solutions on the market today. We also discussed about Akademiska hus current service and who used it and what the actual problem were.", visualImage:visualImage4},
+//   {sectionRubrik:"Problem", sectionText:"During our interviews we noticed that it is hard for Akademiska hus customers service staff to report property faults. Which lower the value of the service that Akademiska hus provides (Property’s for campuses) for both the customer and the customers customer (students, teachers etc.).", visualImage:visualImage5},
+//   {sectionRubrik:"Solution", sectionText:"To make it easier to report faults, we came up with a web app which you can use as a tool to report faults on the go. After careful considerations we selected these five functions to be developed.", visualImage:visualImage6},
+//   {sectionRubrik:"End result", sectionText:"We created a tool that will make the fault reporting possible wherever you are, it will be easier and a lot faster then the current solution. Because of that, the communication between Akademiska hus and their customers will be improved, and the customers will have a better experience then before.", visualImage:visualImage7},
 
-  {sectionRubrik:"Dynamics", sectionText:"We put the text over the image to create more dynamics in the image as well as making it feel more analog and adventurous.", visualImage:visualImage8},
-  {sectionRubrik:"CMS", sectionText:"The page is built on Contentful's CMS system. We put a lot of effort into making the cms easy to handle so that Knowel's members can easily add new journeys, which hopefully will make the website updated more often and make the site more relevant in the future.", visualImage:visualImage9},
-  {sectionRubrik:"Limits", sectionText:"We had a sharp time pressure (120 hours) on us for such a big project, which meant we had to enter the production phase early. Due to this, we added more time to intervene and get feedback from Knowel instead of future users.", visualImage:visualImage10},
-  {sectionRubrik:"Next Step", sectionText:"We believe that the next step is to bring out the word about Knowel even more to local businesses, and show them how Knowel can add add value. Which can be done by anything from Cold Calling to mingling.", visualImage:visualImage11}
-]
+//   {sectionRubrik:"Dynamics", sectionText:"We put the text over the image to create more dynamics in the image as well as making it feel more analog and adventurous.", visualImage:visualImage8},
+//   {sectionRubrik:"CMS", sectionText:"The page is built on Contentful's CMS system. We put a lot of effort into making the cms easy to handle so that Knowel's members can easily add new journeys, which hopefully will make the website updated more often and make the site more relevant in the future.", visualImage:visualImage9},
+//   {sectionRubrik:"Limits", sectionText:"We had a sharp time pressure (120 hours) on us for such a big project, which meant we had to enter the production phase early. Due to this, we added more time to intervene and get feedback from Knowel instead of future users.", visualImage:visualImage10},
+//   {sectionRubrik:"Next Step", sectionText:"We believe that the next step is to bring out the word about Knowel even more to local businesses, and show them how Knowel can add add value. Which can be done by anything from Cold Calling to mingling.", visualImage:visualImage11}
+// ]
 
 class projectAkademiskaHus extends Component {
   constructor(props) {
@@ -72,26 +61,39 @@ class projectAkademiskaHus extends Component {
 
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 1300);
+
+    Events.scrollEvent.register('begin', function(to, element) {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function(to, element) {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+  }
+   scrollTo() {
+    scroll.scrollTo(window.innerHeight);
   }
 
-  renderInformation(data) {
-    console.log(data);
-    return(
-    <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data.sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data.sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage1} className="visualImage"/>
-        </div>
-      </Section>
-      )
-  }
+  // renderInformation(data) {
+  //   console.log(data);
+  //   return(
+  //   <Section className="section2">
+  //       <div className="sectionTextContainer">
+  //         <div>
+  //           <h1 className="sectionRubrik">{data.sectionRubrik}</h1> 
+  //           <h3 className="sectionText">
+  //           {data.sectionText}
+  //           </h3> 
+  //        </div>
+  //       </div>
+  //       <div className="visualImageContainer">
+  //         <img src={visualImage1} className="visualImage"/>
+  //       </div>
+  //     </Section>
+  //     )
+  // }
 
 
   backArrow(){
@@ -120,7 +122,7 @@ class projectAkademiskaHus extends Component {
   }
   pageRender(loading) {
     console.log(loading)
-    console.log(data[1], 'pageRender');
+    // console.log(data[1], 'pageRender');
     if(loading === true) {
       setTimeout(() => this.setState({ introContainerClass: "introContainerFinished introContainer", projectInfoAnimated: "projectInfoTextContainer projectInfoTextContainerAnimated" }), 1400);
       console.log("Loading")
@@ -131,190 +133,116 @@ class projectAkademiskaHus extends Component {
             </div>);
     }
     return (
-      <SectionsContainer {...options}>
-      <Section >
-       <div className={this.state.introContainerClass}>
-          <div className={this.state.projectInfoAnimated}>
-            <h1 className="projectInfoRubrik"> Akademiska Hus </h1>
-            <h2 className="projectInfoSubRubrik"> A mobile interface that assists Akademiska hus workforce throughout their day.</h2>
-            <div className="infoSubContainerContainer">
-            <div className="infoSubContainer"><h3 className="noMargin">visit</h3> <a href="https://vimeo.com/258806888"><h4>Website</h4></a></div>
-            <div className="infoSubContainer"><h3 className="noMargin">status</h3><h4>Complete</h4></div>
-            <div className="infoSubContainer"><h3 className="noMargin">year</h3><h4>2018</h4></div>
+        <div>
+        <div>
+         <div className={this.state.introContainerClass}>
+            <div className={this.state.projectInfoAnimated}>
+              <h1 className="projectInfoRubrik"> Akademiska Hus </h1>
+              <h2 className="projectInfoSubRubrik"> A mobile interface that assists Akademiska hus workforce throughout their day.</h2>
+              <div className="infoSubContainerContainer">
+              <div className="infoSubContainer"><h3 className="noMargin">visit</h3> <a href="https://vimeo.com/258806888"><h4>Website</h4></a></div>
+              <div className="infoSubContainer"><h3 className="noMargin">status</h3><h4>Complete</h4></div>
+              <div className="infoSubContainer"><h3 className="noMargin">year</h3><h4>2018</h4></div>
+              </div>
+          </div>
+          <div className="readMoreContainer">
+            <a onClick={this.scrollTo} style={{cursor:"pointer"}}> <h2 className="readMoreText"> Read More </h2></a>
+            <div className="readMoreLine"> </div>
+          </div>
+          </div>
+          </div>
+          <div className="projectContentSection">
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Our mission </h1>
+              <p className="projectContentText">I and Sarah Bengtsson were assigned the mission to inspire Akademiska Hus  on how they could build a mobile interface for their customers.</p>
             </div>
-        </div>
-        <div className="readMoreContainer">
-          <a href="#/projectAkademiskaHus/#2"> <h2 className="readMoreText"> Read More </h2></a>
-          <div className="readMoreLine"> </div>
-        </div>
-        </div>
-      </Section>
 
-      <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[1].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[1].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage1} className="visualImage"/>
-        </div>
-      </Section>
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> The client </h1>
+              <p className="projectContentText">Akademiska hus is a state owned property owner, who mostly owns property’s located on different university campuses. In size, it is Sweden's second largest property owner.</p>
+            </div>
 
-      <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[2].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[2].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage2} className="visualImage"/>
-        </div>
-      </Section>
+            <div className="projectContentContainer" style={{marginBottom:"25vh"}}> 
+              <h1 className="projectContentSubHeader"> My Role </h1>
+              <p className="projectContentText">My role in the project was to do the UI/UX work so everything from interviewing to the finising details on the design.</p>
+            </div>
 
-      <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[3].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[3].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage3} className="visualImage"/>
-        </div>
-      </Section>
+            <h1 style={{ alignSelf: "center", fontSize:"46px",fontFamily: "poppins", marginBottom:"37px"}} >Discover</h1>
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Market resarch </h1>
+              <p className="projectContentText">We started our entire process by doing market research to investigate if there were any other similar solutions on the market today. We noticed that many of Akademiska hus konkurrenter had applications where their customers could report propety faults.</p>
+            </div>
 
-      <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[4].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[4].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage4} className="visualImage"/>
-        </div>
-      </Section>
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Problem </h1>
+              <p className="projectContentText">During our interviews we noticed that it is hard for Akademiska hus customers service staff to report property faults. Which lower the value of the service that Akademiska hus provides (Property’s for campuses) for both the customer and the customers customer (students, teachers etc.)</p>
+            </div>
 
-      <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[5].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[5].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage5} className="visualImage"/>
-        </div>
-      </Section>
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Interviewing Result </h1>
+              <p className="projectContentText">
+                - You can not report faults easy on your phone.
+                <br/>- The report system on Akademiska hus website is difficult and annoying to use.
+                <br/>- You can not send an image with the report.
+                <br/>- You need to write in your personal information every time you report.
+                <br/>- Long response time between akademiska hus operating technicians and customers service staff.
+                <br/>- There is also no easy way to communicate your information to customers.
+              </p>
+            </div>
 
-      <Section className="section2">
-        <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[6].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[6].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer">
-          <img src={visualImage6} className="visualImage"/>
-        </div>
-      </Section>
-       <Section className="section2">
-       <div className="sectionTextContainer">
-          <div>
-            <h1 className="sectionRubrik">{data[7].sectionRubrik}</h1> 
-            <h3 className="sectionText">
-            {data[7].sectionText}
-            </h3> 
-         </div>
-        </div>
-        <div className="visualImageContainer" style={{display:"flex", justifyContent:"center", alignItems:"center",background:"white"}}>
-          <img src={visualImage7} className="visualImage" style={{width:"auto", height: "80%" }}/>
-        </div>
-      </Section>
+            <div className="projectContentContainer" style={{marginBottom:"5vh"}}> 
+              <h1 className="projectContentSubHeader"> Users </h1>
+              <p className="projectContentText" style={{ width:"30%"}}>We discussed about which users we would prioritize to target this new service to and who would need it. We found that we would primarily need to solve the communication between Akademiska hus – Customer/Tenants – Users/the people who use academic house properties.</p>
+              <img src={visualImage4} className="projectContentImage" style={{ width:"14%"}}/>
+            </div>
 
-      {/*{data.map(data => (this.renderInformation(data)))}*/}
+            <h1 style={{ alignSelf: "center", fontSize:"46px",fontFamily: "poppins", marginBottom:"37px"}} >Exploration</h1>
 
-      </SectionsContainer>
+             <div className="projectContentContainer" style={{marginBottom:"1vh"}}> 
+              <h1 className="projectContentSubHeader"> Wireframing </h1>
+              <p className="projectContentText">When we made the first wireframes we took into account that the users of the product would largely be non-technical.  And that the product should feel just as natural for them as a hammer or a notebook.</p>
+            </div>
+            <img src={visualImage5} className="projectContentFullHeightImage"/>
+             <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> User testing </h1>
+              <p className="projectContentText">During the usertests we noticed that the users had problems reading the serif fontface so we switched to the easily recognizable roboto instead. We also understood that the users wanted it to be possible to open the faults you had reported without switching view so they quickly could read the faults.</p>
+            </div>
+
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Solution </h1>
+              <p className="projectContentText">To make it easier to report faults, we came up with a web app which you can use as a tool to report faults on the go. After discussion with both Akademiska hus and their users we selected these five functions to be developed:
+                <br/>- Sending picture with the faults form. 
+                <br/>- Being able to quickly see your reported faults and their status (inactive, active, archived).
+                <br/>- Information about property interference and other information, which should be easily relayed if needed.
+                <br/>- It should be easy to find the contact information for the person who is responsible for the school you take care of.</p>
+            </div>
+
+            <h1 style={{ alignSelf: "center", fontSize:"46px",fontFamily: "poppins", marginBottom:"37px"}} >Design</h1>
+
+            <div className="projectContentContainer" style={{marginBottom:"25vh"}}> 
+              <h1 className="projectContentSubHeader"> Interface </h1>
+              <p className="projectContentText" style={{ width:"22%"}}>The application were created with 32px margins and 4 column layout.  We used google material design 2.0 because we felt that it was a waste of time to create new elements.</p>
+              <img src={visualImage6} className="projectContentImage"/>
+            </div>
+
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Introduction </h1>
+              <p className="projectContentText">We made a short tutorial for first-time users, to help them understand the meaning of the application.</p>
+            </div>
+            <img src={visualImage8} className="projectContentFullHeightImage" style={{width:"84%", marginBottom:"15vh", height:"unset"}}/>
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> High definition Protype </h1>
+              <iframe className="projectContentPrototype" width="438" height="930" src="//invis.io/4QMRL5AMBZH" frameBorder="0" allowFullScreen></iframe>
+            </div>
+
+          </div>
+        </div>
       )
-  }
-
-    scrolli() {
-      console.log(window.location.hostname + "/ww")
-      if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#2") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(100vh/8)"} }> </div>
-          )
-      }
-      else if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#3") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(12.5vh*2)"} }> </div>
-          )
-      }
-      else if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#4") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(12.5vh*3)"} }> </div>
-          )
-      }
-      else if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#5") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(12.5vh*4)"} }> </div>
-          )
-      }
-      else if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#6") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(12.5vh*5)"} }> </div>
-          )
-      }
-      else if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#7") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(12.5vh*6)"} }> </div>
-          )
-      }
-      else if(window.location.href === window.location.origin +"/#/projectAkademiskaHus/#8") {
-        return (
-          <div className="scrollPart" style={{height:"calc(100%/8)", background:"#5345E4", marginTop:"calc(12.5vh*7)"} }> </div>
-          )
-      }
-
-    }
-
-    scrollWheel() {
-      if(window.location.href !== window.location.origin +"/#/projectAkademiskaHus/#1" ){
-    return(
-      <div>
-      
-      <div class="scroll"> 
-      {this.scrolli()}
-      {data.map((data, i) => (
-         <a href={"/#/projectAkademiskaHus/#"+(i+1)}> <div className="scrollLinks" id={i} style={{height:"calc(100%/8)", background:"#F7E0BC"} }> </div></a>
-        ))}
-      </div>
-      </div>
-      )
-  }
-    
-  }
+  } 
   render() {
     return (
       <div>
-      {this.scrollWheel()}
       {this.backArrow()}
-      <ScrollToTopOnMount/>
       {this.pageRender(this.state.loading)}
       </div>
       
