@@ -140,7 +140,7 @@ class projectAkademiskaHus extends Component {
               <h1 className="projectInfoRubrik"> Akademiska Hus </h1>
               <h2 className="projectInfoSubRubrik"> A mobile interface that assists Akademiska hus workforce throughout their day.</h2>
               <div className="infoSubContainerContainer">
-              <div className="infoSubContainer"><h3 className="noMargin">visit</h3> <a href="https://vimeo.com/258806888"><h4>Website</h4></a></div>
+              <div className="infoSubContainer"><h3 className="noMargin">visit</h3> <a href="https://invis.io/9SJ6OV3R5K6#/298515109_Guide"><h4>Website</h4></a></div>
               <div className="infoSubContainer"><h3 className="noMargin">status</h3><h4>Complete</h4></div>
               <div className="infoSubContainer"><h3 className="noMargin">year</h3><h4>2018</h4></div>
               </div>
