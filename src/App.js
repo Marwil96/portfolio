@@ -101,9 +101,9 @@ class App extends Component {
               <span style={{background:"white", transform: "rotate(-45deg) translate(0, -4px)"}}></span>
               </div>
             <h2 className="navigationProjectSubHeader" >Projects</h2>
-            <Link to="/projectKnowel" className={this.state.navLink1} onClick={this.navigationOff.bind(this)}>Knowel</Link>
-            <Link to="/projectAkademiskaHus" className={this.state.navLink2} onClick={this.navigationOff.bind(this)}>Akademiska Hus</Link>
-            <Link to="/projectCryptoTracker" className={this.state.navLink3} onClick={this.navigationOff.bind(this)}>Cryptotracker</Link>
+            <Link to="/projectAkademiskaHus" className={this.state.navLink1} onClick={this.navigationOff.bind(this)}>Akademiska Hus</Link>
+            <Link to="/projectCryptoTracker" className={this.state.navLink2} onClick={this.navigationOff.bind(this)}>Cryptotracker</Link>
+            <Link to="/projectKnowel" className={this.state.navLink3} onClick={this.navigationOff.bind(this)}>Knowel</Link>
           </div>
           <div className="navigationButtons">
             <Link to="/#Home" className={this.state.navMenu1} onClick={this.navigationOff.bind(this)}>Home</Link>

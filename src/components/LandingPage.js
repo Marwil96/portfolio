@@ -31,7 +31,7 @@ class LandingPage extends Component {
         <h1 style={{position:"absolute", color:"#5245e5", fontSize: "14px", left:"10%",top:"4%", width:"40%", fontFamily: 'Roboto Mono', fontWeight: 400}}> William Martinsson - Digital Designer </h1>
           <div className={this.state.rubrikContainerAnimation}> 
             <h1> <span className='bigHello'>Hello</span><span className='rubrikText'> <br/> <span className='lowOpacity'>I am a</span> <span className='digitalDesigner'>
-            <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Arsenal Fan"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
+            <TextLoop children={["Digital Designer", "Frontend Dev", "Quick Learner", "Gooooneer"]} speed={1500} adjustingSpeed={200}/> </span> <br/>
             <span className='lowOpacity'>based in <span class="locationRubrik">Gothenburg</span></span></span> </h1>
           </div>
           <Link to="projectPage" activeClass="active" spy={true} smooth={true} offset={50} duration={500} className="arrowContainer">

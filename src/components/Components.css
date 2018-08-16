@@ -425,7 +425,7 @@ body {
     -webkit-transition: all .5s ease-in-out;
 }
 .slideUp {
-  margin-top: -150px;
+  margin-top: -20vh;
   /*margin-top: -20vh;*/
 }
 .moreProjectsButton{
@@ -484,6 +484,7 @@ body {
   display: flex !important;
   justify-content: center;
   height: 60vh;
+  max-height:430px;
   /*max-width: 300px;*/
   /*width: 80vh !important;*/
   margin-top: 5%;
@@ -737,7 +738,21 @@ a:hover {
 
 
 
-
+@media (min-width: 1500px) {
+  .largeContactMeButton {
+    font-size: 1309%;
+    margin-top: -119px;
+    }
+    .footerContainer {
+      align-items:center;
+    }
+    .footerContactContainer {
+      font-size: 32px;
+    }
+    .footerLinkContainer {
+      font-size: 32px;
+    }
+}
 
 @media (max-width: 780px) {
   .navigationProjectContainer {

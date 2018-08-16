@@ -516,6 +516,23 @@ h4 {
     opacity: 0.75;
     margin:0;
 }
+@media (min-width: 1500px) {
+  .projectInfoTextContainer {
+    width: 41%;
+    }
+  .projectContentSubHeader {
+  font-size: 32px;
+  }
+  .projectContentText {
+    font-size: 20px;
+  }
+  .projectContentPrototype {
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+    margin-top: -127px;
+}
+}
 
 @media (max-width: 780px) {
   /*New Design */

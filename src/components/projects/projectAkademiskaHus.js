@@ -170,7 +170,7 @@ class projectAkademiskaHus extends Component {
             <h1 style={{ alignSelf: "center", fontSize:"46px",fontFamily: "poppins", marginBottom:"37px"}} >Discover</h1>
             <div className="projectContentContainer"> 
               <h1 className="projectContentSubHeader"> Market resarch </h1>
-              <p className="projectContentText">We started our entire process by doing market research to investigate if there were any other similar solutions on the market today. We noticed that many of Akademiska hus konkurrenter had applications where their customers could report propety faults.</p>
+              <p className="projectContentText">We started our entire process by doing market research to investigate if there were any other similar solutions on the market today. We noticed that many of Akademiska hus competitors had applications where their customers could easily report propety faults.</p>
             </div>
 
             <div className="projectContentContainer"> 
@@ -205,7 +205,7 @@ class projectAkademiskaHus extends Component {
             <img src={visualImage5} className="projectContentFullHeightImage"/>
              <div className="projectContentContainer"> 
               <h1 className="projectContentSubHeader"> User testing </h1>
-              <p className="projectContentText">During the usertests we noticed that the users had problems reading the serif fontface so we switched to the easily recognizable roboto instead. We also understood that the users wanted it to be possible to open the faults you had reported without switching view so they quickly could read the faults.</p>
+              <p className="projectContentText">During the usertests we noticed that the users had problems reading the serif fontface so we switched to the recognizable roboto instead. We also understood that the users wanted it to be possible to open the faults you had reported without switching view so they quickly could read the faults.</p>
             </div>
 
             <div className="projectContentContainer"> 
@@ -219,7 +219,7 @@ class projectAkademiskaHus extends Component {
 
             <h1 style={{ alignSelf: "center", fontSize:"46px",fontFamily: "poppins", marginBottom:"37px"}} >Design</h1>
 
-            <div className="projectContentContainer" style={{marginBottom:"25vh"}}> 
+            <div className="projectContentContainer"> 
               <h1 className="projectContentSubHeader"> Interface </h1>
               <p className="projectContentText" style={{ width:"22%"}}>The application were created with 32px margins and 4 column layout.  We used google material design 2.0 because we felt that it was a waste of time to create new elements.</p>
               <img src={visualImage6} className="projectContentImage"/>

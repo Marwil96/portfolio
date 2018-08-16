@@ -10,9 +10,9 @@ import secondImage from '../img/ThriveMobilMockup.png';
 import thirdImage from '../img/KnowelMacbookMockup.png';
 import icon  from '../img/Icon.png';
 var data = [
-  {projectBoxRubrik:"Knowel", projectBoxText:"A completely new identity & website.",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectKnowel#1", subject:"Development & Design", id:"dator"},
-  {projectBoxRubrik:"Akademiska Hus", projectBoxText:"A mobile interface that assists  throughout the day.", color:"#AEF2F0", backgroundColor:"#263776", image:secondImage, link:"/projectAkademiskaHus", subject:"Design", id:"mobil"},
+  {projectBoxRubrik:"Akademiska Hus", projectBoxText:"A mobile interface that assists  throughout the day.", color:"#FDD8BB", backgroundColor:"#5345E4", image:secondImage, link:"/projectAkademiskaHus", subject:"Design", id:"mobil"},
   {projectBoxRubrik:"Cryptotracker", projectBoxText:"A app that tracks the cryptocurrencys you are interested in.", color:"#172AD8", backgroundColor:"#80BBE5", image:thirdImage, link:"/projectCryptoTracker", subject:"Development & Design", id:"dator"},
+  {projectBoxRubrik:"Knowel", projectBoxText:"A completely new identity & website.",color:"#AEF2F0", backgroundColor:"#263776", image:firstImage, link:"/projectKnowel#1", subject:"Development & Design", id:"dator"},
 ]
 var showMoreProjectsData = [
   {projectBoxRubrik:"Starvation Concept", projectBoxText:"Learning flinto animation",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectStarvation", subject:"Design", id:"dator"},
