@@ -1,5 +1,5 @@
 a {
-    color: inherit;
+  color: inherit;
 }
 
 /*.aboutPageContainer{
@@ -21,7 +21,7 @@ a {
   flex-direction: row;
   border-bottom: 1px solid black;
   padding-top: 13vh;
-    padding-bottom: 20vh;
+  padding-bottom: 20vh;
 }
 .shortInformationContainer {
   margin-right: 10%;
@@ -61,19 +61,18 @@ a {
   opacity: 0.85;
 }
 .menuContainer {
-       display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-item-align: end;
-    justify-self: center;
-    position: fixed;
-    height: 100%;
-    align-items: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-start;
-    width: 100%;
-
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-item-align: end;
+  justify-self: center;
+  position: fixed;
+  height: 100%;
+  align-items: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-start;
+  width: 100%;
 }
 .menuButton {
   height: 50px;
@@ -82,35 +81,35 @@ a {
 }
 
 .bm-burger-button {
- position: absolute;
- right: 8%;
- height: 50px;
- top:8%;
+  position: absolute;
+  right: 8%;
+  height: 50px;
+  top: 8%;
 }
- 
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #373A47;
 }
- 
- 
+
+
 /* General sidebar styles */
 .bm-menu {
   background: #383030;
   font-size: 1.15em;
 }
- 
+
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #373A47;
 }
- 
+
 /* Wrapper for item list */
 .bm-item-list {
   color: white;
   text-align: center;
 }
- 
+
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
@@ -127,11 +126,10 @@ a {
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
-  background:#F6A623;
+  background: #F6A623;
   width: 100%;
-  padding:0;
+  padding: 0;
   margin-top: 15%;
-
 }
 
 .aboutRubrik {
@@ -150,11 +148,11 @@ a {
   opacity: 0.76;
   margin: 0.1% 0 0 0;
 }
-.infoWindow{
+.infoWindow {
   width: 80%;
   height: 30%;
   min-height: 410px;
-  background-color:#FFF793;
+  background-color: #FFF793;
   align-self: center;
   margin-right: auto;
   margin-left: auto;
@@ -169,7 +167,7 @@ a {
 }
 .textWindowRubrik {
   margin-top: 15%;
-   font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   font-size: 38px;
   text-transform: uppercase;
@@ -184,16 +182,16 @@ a {
   opacity: 0.76;
 }
 .textWindowContactMe {
--ms-transform: rotate(-270deg); /* IE 9 */
--webkit-transform: rotate(-270deg); /* Chrome, Safari, Opera */
-transform: rotate(-270deg);
-font-family: 'Roboto Mono', monospace;
-font-weight: 400;
-text-decoration: underline;
-font-size: 45px;
-color: #000000;
-opacity: 0.8;
-letter-spacing: 0.67px;
+      -ms-transform: rotate(-270deg); /* IE 9 */
+  -webkit-transform: rotate(-270deg); /* Chrome, Safari, Opera */
+          transform: rotate(-270deg);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-decoration: underline;
+  font-size: 45px;
+  color: #000000;
+  opacity: 0.8;
+  letter-spacing: 0.67px;
   text-transform: uppercase;
   justify-content: center;
   text-align: center;
@@ -205,34 +203,34 @@ letter-spacing: 0.67px;
     max-width: 90%;
     margin-left: 4%;
     margin-top: 12vh;
-}
-.aboutContainer {
-  flex-direction: column;
-  padding-top: 0;
+  }
+  .aboutContainer {
+    flex-direction: column;
+    padding-top: 0;
     padding-bottom: 0;
-}
-.shortInformationContainer {
-  max-width: 80%;
-  align-self: center;
-  text-align: center;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
-  margin-right: 0;
-}
-.shortInformationHeader {
-  font-size: 120%;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  opacity: 0.85;
-  margin-bottom: -18px;
-}
-.shortInformationText {
-  font-size: 100%;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  opacity: 0.85;
-}
-  .infoWindow {  
+  }
+  .shortInformationContainer {
+    max-width: 80%;
+    align-self: center;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    margin-right: 0;
+  }
+  .shortInformationHeader {
+    font-size: 120%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    opacity: 0.85;
+    margin-bottom: -18px;
+  }
+  .shortInformationText {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  .infoWindow {
     background-color: #FFF793;
     -ms-flex-item-align: center;
     margin-top: 3%;
@@ -241,55 +239,54 @@ letter-spacing: 0.67px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
-    flex-direction: column;
-}
+        flex-direction: column;
+  }
 }
 .invsible {
   display: none !important;
 }
 .textWindow {
-    -ms-flex: 1 1;
-    flex: 1 1;
-    margin-top: 3%;
-    display: -ms-flexbox;
-    display: flex;
-    width: 80%;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    align-self: center;
+  -ms-flex: 1 1;
+      flex: 1 1;
+  margin-top: 3%;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  align-self: center;
 }
 .textWindowRubrik {
-    margin-top: 15%;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
-    text-align: center;
-    font-size: 200%!important;
-    padding: 0;
-    margin: 0 !important;
-    text-transform: uppercase;
-    opacity: 0.76;
-    letter-spacing: 0.67px;
-    text-align: center!important;
-
+  margin-top: 15%;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  text-align: center;
+  font-size: 200%!important;
+  padding: 0;
+  margin: 0 !important;
+  text-transform: uppercase;
+  opacity: 0.76;
+  letter-spacing: 0.67px;
+  text-align: center!important;
 }
 .textWindowText {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
-    /* margin-top: -5%; */
-    font-size: 120%!important;
-    text-align: center;
-    opacity: 0.76;
-    text-align: center!important;
-    margin: 0 !important;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  /* margin-top: -5%; */
+  font-size: 120%!important;
+  text-align: center;
+  opacity: 0.76;
+  text-align: center!important;
+  margin: 0 !important;
 }
 
 @media (max-width: 365px) {
-.pTextStyle {
+  .pTextStyle {
     /*font-size: 12px;*/
     font-size: 80%;
   }
   .h1TextStyle {
     /*font-size: 24px;*/
-        font-size: 160%;
+    font-size: 160%;
   }
 }

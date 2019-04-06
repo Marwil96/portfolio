@@ -21,6 +21,8 @@ import ProjectThrive from './components/projects/ProjectThrive';
 import ProjectKnowel from './components/projects/projectKnowel';
 import ProjectCryptoTracker from './components/projects/projectCryptoTracker';
 import ProjectAkademiskaHus from './components/projects/projectAkademiskaHus';
+import Project48H from './components/projects/project48H';
+import ProjectDronelist from './components/projects/projectDronelist';
 
 
 ReactGA.initialize('UA-37970043-2'); //Unique Google Analytics tracking number
@@ -86,12 +88,14 @@ class App extends Component {
     }
     return (
        <div className="App">
-     <div onClick={this.navigationOn.bind(this)} id="menuToggle" style={{position:"fixed"}}>
-    <input type="checkbox" />
-    <span style={{background:"#5245e5"}}></span>
-    <span style={{background:"#5245e5"}}></span>
-    <span style={{background:"#5245e5"}}></span>
-    </div>
+
+       <div onClick={this.navigationOn.bind(this)} id="menuToggle" style={{position:"fixed"}}>
+      <input type="checkbox" />
+      <span style={{background:"#5245e5"}}></span>
+      <span style={{background:"#5245e5"}}></span>
+      <span style={{background:"#5245e5"}}></span>
+      </div>
+      
      <div className={this.state.nav}> 
         <div className="navigationProjectContainer">
             <div onClick={this.navigationOff.bind(this)} id="menuToggle">
@@ -107,8 +111,8 @@ class App extends Component {
           </div>
           <div className="navigationButtons">
             <Link to="/#Home" className={this.state.navMenu1} onClick={this.navigationOff.bind(this)}>Home</Link>
-            <Link to="/" className={this.state.navMenu2} onClick={this.navigationOff.bind(this)}>About</Link>
-            <a href="https://williammartinsson.typeform.com/to/grsvRk" className={this.state.navMenu3} onClick={this.navigationOff.bind(this)}>Contact</a>
+            <a href="https://playground.williammartinsson.work" className={this.state.navMenu2} onClick={this.navigationOff.bind(this)}>Playground</a>
+            <a href="mailto:william_martinsson@hotmail.com" className={this.state.navMenu3} onClick={this.navigationOff.bind(this)}>Contact</a>
           </div>
         </div>
     <Main />
@@ -144,6 +148,8 @@ const Main = () => (
       <Route exact path="/" component={Home}/>
       <Route path="/projectThrive" component={ProjectThrive}/>
       <Route path="/projectKnowel" component={ProjectKnowel}/>
+      <Route path="/project48H" component={Project48H}/>
+      <Route path="/projectDronelist" component={ProjectDronelist}/>
       <Route path="/projectStarvation" component={ProjectStarvation}/>
       <Route path="/projectCryptoTracker" component={ProjectCryptoTracker}/>
       <Route path="/projectAkademiskaHus" component={ProjectAkademiskaHus}/>

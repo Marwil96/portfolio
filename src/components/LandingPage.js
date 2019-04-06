@@ -46,11 +46,11 @@ class LandingPage extends Component {
          </div>
          <div className="newContainer">
           <div className="footerContainer"> 
-            <h1 className="largeContactMeButton" style={{textAlign:"center",position:"absolute", fontFamily: "Poppins, sans-serif"}}> <a href="https://williammartinsson.typeform.com/to/grsvRk">Contact Me!</a> </h1>
+            <h1 className="largeContactMeButton" style={{textAlign:"center",position:"absolute", fontFamily: "Poppins, sans-serif"}}> <a href="mailto:william_martinsson@hotmail.com">Contact Me!</a> </h1>
             <div className="footerLinkContainer">
               <h2 className="footerLinkText"> 
                <a href="https://medium.com/@marwil1996">Medium</a>
-               <a className="paddingNormal" href="https://williammartinsson.typeform.com/to/grsvRk">Contact</a></h2>
+               <a className="paddingNormal" href="mailto:william_martinsson@hotmail.com">Contact</a></h2>
             </div>
             <div className="footerContactContainer">
               <h2 className="footerContactText"><a href="https://www.behance.net/William_mae68a">Behance</a>

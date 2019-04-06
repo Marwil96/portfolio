@@ -12,8 +12,8 @@ import firstImage from '../../img/Reporter/ReporterLogin.png';
 import secondImage from '../../img/Reporter/ReporterMap.png';
 import thirdImage from '../../img/Reporter/ReporterReport.png';
 import fourthImage from '../../img/Reporter/ReporterWebbCity.png';
-import visualImage1 from '../../img/AkademiskaHus/OurMission.png';
-import visualImage2 from '../../img/AkademiskaHus/ForWho.png';
+import visualImage1 from '../../img/03_print.png';
+import visualImage2 from '../../img/48H.jpg';
 import visualImage3 from '../../img/AkademiskaHus/Users.png';
 import visualImage4 from '../../img/AkademiskaHus/UsersBigDown.png';
 import visualImage5 from '../../img/AkademiskaHus/WireframeSideWays.png';
@@ -137,8 +137,8 @@ class projectAkademiskaHus extends Component {
         <div>
          <div className={this.state.introContainerClass}>
             <div className={this.state.projectInfoAnimated}>
-              <h1 className="projectInfoRubrik"> Akademiska Hus </h1>
-              <h2 className="projectInfoSubRubrik"> A mobile interface that assists Akademiska hus workforce throughout their day.</h2>
+              <h1 className="projectInfoRubrik"> 48H </h1>
+              <h2 className="projectInfoSubRubrik"> Second place in Swedens biggest design competition for students.</h2>
               <div className="infoSubContainerContainer">
               <div className="infoSubContainer"><h3 className="noMargin">visit</h3> <a href="https://invis.io/9SJ6OV3R5K6#/298515109_Guide"><h4>Website</h4></a></div>
               <div className="infoSubContainer"><h3 className="noMargin">status</h3><h4>Complete</h4></div>
@@ -152,88 +152,44 @@ class projectAkademiskaHus extends Component {
           </div>
           </div>
           <div className="projectContentSection">
-            <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Our mission </h1>
-              <p className="projectContentText">I and Sarah Bengtsson were assigned the mission to inspire Akademiska Hus  on how they could build a mobile interface for their customers.</p>
-            </div>
 
             <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> The client </h1>
-              <p className="projectContentText">Akademiska hus is a state owned property owner, who mostly owns property’s located on different university campuses. In size, it is Sweden's second largest property owner.</p>
-            </div>
-
-            <div className="projectContentContainer" style={{marginBottom:"12vh"}}> 
-              <h1 className="projectContentSubHeader"> My Role </h1>
-              <p className="projectContentText">My role in the project was to do the UI/UX work so everything from interviewing to the finising details on the design.</p>
-            </div>
-
-            <h1 className="contentHeader">Discover</h1>
-            <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Market resarch </h1>
-              <p className="projectContentText">We started our entire process by doing market research to investigate if there were any other similar solutions on the market today. We noticed that many of Akademiska hus competitors had applications where their customers could easily report propety faults.</p>
+              <h1 className="projectContentSubHeader"> 48H </h1>
+              <p className="projectContentText">48H är en reklamtävling för studenter som studerar media och kommunikation. Under två dygn jobbade vi i team av 4 för att utforma en print- och en digital annons.</p>
             </div>
 
             <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Problem </h1>
-              <p className="projectContentText">During our interviews we noticed that it is hard for Akademiska hus customers service staff to report property faults. Which lower the value of the service that Akademiska hus provides (Property’s for campuses) for both the customer and the customers customer (students, teachers etc.)</p>
+              <h1 className="projectContentSubHeader"> Uppdrag </h1>
+              <p className="projectContentText">Goodsports ville ha en reklamstrategi för att öka den allmänna kunskapen om Goodsports</p>
             </div>
 
             <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Interviewing Result </h1>
-              <p className="projectContentText">
-                - You can not report faults easy on your phone.
-                <br/>- The report system on Akademiska hus website is difficult and annoying to use.
-                <br/>- You can not send an image with the report.
-                <br/>- You need to write in your personal information every time you report.
-                <br/>- Long response time between akademiska hus operating technicians and customers service staff.
-                <br/>- There is also no easy way to communicate your information to customers.
-              </p>
+              <h1 className="projectContentSubHeader"> Uppdragsgivaren </h1>
+              <p className="projectContentText">Goodsports är en icke vinstdrivande stiftelse som verkar för integration genom idrott.</p>
             </div>
 
-            <div className="projectContentContainer" style={{marginBottom:"5vh"}}> 
-              <h1 className="projectContentSubHeader"> Users </h1>
-              <p className="projectContentText" style={{ width:"30%"}}>We discussed about which users we would prioritize to target this new service to and who would need it. We found that we would primarily need to solve the communication between Akademiska hus – Customer/Tenants – Users/the people who use academic house properties.</p>
-              <img src={visualImage4} className="projectContentImage cirklarImages" style={{ width:"14%"}}/>
+            <div className="projectContentContainer"> 
+              <h1 className="projectContentSubHeader"> Min roll </h1>
+              <p className="projectContentText">Min roll i projektet var att göra print designen.</p>
             </div>
 
-            <h1 className="contentHeader">Exploration</h1>
-
-             <div className="projectContentContainer" style={{marginBottom:"1vh"}}> 
-              <h1 className="projectContentSubHeader"> Wireframing </h1>
-              <p className="projectContentText">When we made the first wireframes we took into account that the users of the product would largely be non-technical.  And that the product should feel just as natural for them as a hammer or a notebook.</p>
-            </div>
-            <img src={visualImage5} className="projectContentFullHeightImage"/>
              <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> User testing </h1>
-              <p className="projectContentText">During the usertests we noticed that the users had problems reading the serif fontface so we switched to the recognizable roboto instead. We also understood that the users wanted it to be possible to open the faults you had reported without switching view so they quickly could read the faults.</p>
+              <h1 className="projectContentSubHeader"> Idé & Strategi </h1>
+              <p className="projectContentText">Det sägs att lika barn leker bäst. Vi vill säga att lika barn inte alltid leker bäst. Olikheter behövs för att lära och utmana varandra samt skapa nya förutsättningar. Med projektet Skolträffen vill Goodsport sudda ut gränser mellan individer, bostadsområden och fördomar genom att få ungdomar att mötas.
+
+<br/><br/>Vi vill skapa en print som får folk att tänka till och engagerar, en print som är utvecklingsbar och som kan tas ut i alla kanaler. Alla med en smartphone känner till fenomenet autocorrect – funktionen som gör vänliga hälsningar till snuskiga inbjudningar, som både förenklar och förvirrar. Hur kan vi skapa en tankeprocess med hjälp av något så simpelt som autocorrect? Genom att, via en sms-konversation, försöka sudda ut det naturliga alternativet vill vi öppna upp för möjligheten att umgås över stadsdelsgränserna. 
+
+<br/><br/>Vi ser en möjlighet att ta ut printen på olika språk beroende på vilket område den visas i, vare sig det är i en tidning eller i en busskur. Genom att göra olika prints kan den ses med olika perspektiv. Vi alla behöver göra förändringen tillsammans. Ett exempel kan vara att ha två printannonser på två olika språk som sitter på 11:ans spårvagn från Bergsjön till Saltholmen, eller röda linjen från Norsborg till Danderyds sjukhus
+</p>
             </div>
 
             <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Solution </h1>
-              <p className="projectContentText">To make it easier to report faults, we came up with a web app which you can use as a tool to report faults on the go. After discussion with both Akademiska hus and their users we selected these five functions to be developed:
-                <br/>- Sending picture with the faults form. 
-                <br/>- Being able to quickly see your reported faults and their status (inactive, active, archived).
-                <br/>- Information about property interference and other information, which should be easily relayed if needed.
-                <br/>- It should be easy to find the contact information for the person who is responsible for the school you take care of.</p>
+              <img src={visualImage1} className="projectContentImage" style={{ maxWidth:"80%"}}/>
+            </div>
+            <div className="projectContentContainer" style={{marginBottom:"25vh"}}> 
+              <img src={visualImage2} className="projectContentImage" style={{ maxWidth:"80%"}}/>
             </div>
 
-            <h1 className="contentHeader">Design</h1>
-
-            <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Interface </h1>
-              <p className="projectContentText" style={{ width:"22%"}}>The application were created with 32px margins and 4 column layout.  We used google material design 2.0 because we felt that it was a waste of time to create new elements.</p>
-              <img src={visualImage6} className="projectContentImage"/>
-            </div>
-
-            <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> Introduction </h1>
-              <p className="projectContentText">We made a short tutorial for first-time users, to help them understand the meaning of the application.</p>
-            </div>
-            <img src={visualImage8} className="projectContentFullHeightImage" style={{width:"84%", marginBottom:"15vh", height:"unset"}}/>
-            <div className="projectContentContainer"> 
-              <h1 className="projectContentSubHeader"> High definition Protype </h1>
-              <iframe className="projectContentPrototype" width="438" height="930" src="//invis.io/4QMRL5AMBZH" frameBorder="0" allowFullScreen></iframe>
-            </div>
 
           </div>
         </div>

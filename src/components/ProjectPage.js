@@ -15,6 +15,8 @@ var data = [
   {projectBoxRubrik:"Knowel", projectBoxText:"A completely new identity & website.",color:"#AEF2F0", backgroundColor:"#263776", image:firstImage, link:"/projectKnowel#1", subject:"Development & Design", id:"dator"},
 ]
 var showMoreProjectsData = [
+{projectBoxRubrik:"Dronelist", projectBoxText:"Website whose purpose is to collect email subscribers.",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectDronelist", subject:"Development & Design", id:"dator"},
+{projectBoxRubrik:"48H", projectBoxText:"Second place in Swedens biggest design competition for students.",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/project48H", subject:"Design", id:"dator"},
   {projectBoxRubrik:"Starvation Concept", projectBoxText:"Learning flinto animation",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectStarvation", subject:"Design", id:"dator"},
   {projectBoxRubrik:"Thrive", projectBoxText:"A campaign site for a ecological fashion store",color:"#FDD8BB", backgroundColor:"#5345E4", image:firstImage, link:"/projectThrive", subject:"Design", id:"dator"}
 ]

@@ -25,6 +25,14 @@ body {
   display:flex;
   margin-bottom: 6vh;
 }
+.contentHeader {
+  align-self: center;
+  font-size: 46px;
+  width: 88%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 37px;
+}
 .projectContentSubHeader {
     font-size: 28px;
     opacity:0.86;
@@ -545,10 +553,19 @@ h4 {
   flex-direction:column;
   align-items:center;
 }
+.contentHeader {
+  text-align:left;
+  margin-bottom:8px;
+  color: #5345e3;
+}
+.cirklarImages {
+  width: 40%!important;
+}
 .projectContentSubHeader {
     font-size: 28px;
     margin: 0;
     font-weight: 700;
+    opacity:0.8;
     display: block;
     width: 100%;
     text-align: left;
@@ -562,7 +579,7 @@ h4 {
 }
 .projectContentImage {
   height: unset;
-  max-width:90%;
+  max-width:90% !important;
   align-self: center;
   object-fit: cover;
   margin-top: 32px;
