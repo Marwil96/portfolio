@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://williammartinsson.work",
+  "homepage": "https://marwil96.github.io/portfolio/",
   "dependencies": {
     "create-history": "^1.0.2",
     "loaders.css": "^0.1.2",

@@ -25,12 +25,12 @@ import Project48H from './components/projects/project48H';
 import ProjectDronelist from './components/projects/projectDronelist';
 
 
-ReactGA.initialize('UA-37970043-2'); //Unique Google Analytics tracking number
-const history = createHistory();
-history.listen((location, action) => {
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
-});
+// ReactGA.initialize('UA-37970043-2'); //Unique Google Analytics tracking number
+// const history = createHistory();
+// history.listen((location, action) => {
+//   ReactGA.set({ page: location.pathname });
+//   ReactGA.pageview(location.pathname);
+// });
 let ScrollerLink      = Scroll.Link;
 let Element    = Scroll.Element;
 let Events     = Scroll.Events;
